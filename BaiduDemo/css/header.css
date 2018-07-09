@@ -5,7 +5,7 @@ html, body {
     padding: 0;
     margin: 0;
     overflow: hidden;  /* important */
-    font: 12px arial;
+    font: 0.9em arial;
     font-family:"微软雅黑";
     text-align: center; ;  /* important */
 }

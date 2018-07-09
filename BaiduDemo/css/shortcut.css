@@ -1,5 +1,5 @@
 .shortcut *{
-    line-height: 34px; /* important */
+    line-height: 2.5em; /* important */
 }
 
 div.shortcut {
@@ -28,11 +28,11 @@ div.s_index {
 }
 
 a.s_index_login{
-    width:50px;
+    width:4em;
 }
 
 a.s_index_product {
-    width:86px;
+    width:8em;
     background: #ffe699;
     border-bottom: 1px solid #ffe699;
 }
