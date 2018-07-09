@@ -1,0 +1,38 @@
+.shortcut *{
+    line-height: 34px; /* important */
+}
+
+div.shortcut {
+    position:relative;
+    width:100%;
+    display: inline-block;
+    border: 1px  solid rgb(218, 218, 218);
+}
+
+div.s_location {
+    float:left;
+    margin-left: 1em;
+}
+
+div.s_location_where {
+    left: 1em;
+    vertical-align: middle;
+}
+
+div.s_index {
+    float:right;
+}
+
+.s_index a{
+    display: inline-block;
+}
+
+a.s_index_login{
+    width:50px;
+}
+
+a.s_index_product {
+    width:86px;
+    background: #ffe699;
+    border-bottom: 1px solid #ffe699;
+}

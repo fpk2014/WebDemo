@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>BaiduDemo</title>
+    <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="shortcut">
+        <div class="s_location">
+            <div class="s_location_where">
+                <span class="location">Location:unknown</span>
+            </div>
+        </div>
+        <div class="s_index">
+            <a class="s_index_login">登录</a>
+            <a class="s_index_product">更多产品</a>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+
+    <div class="main_form">
+        <div class="m_image">
+            <img src="img/searchlogo.png" class="m_image_logo"/>
+        </div>
+        <form class="m_form">
+            <span><input type="text" class="m_form_input" title="input someting"></span>
+            <span><input type="submit" class="m_form_submit"></span>
+        </form>
+    </div>
+</div>
+
+<link href="css/header.css" rel="stylesheet" type="text/css" />
+<link href="css/shortcut.css" rel="stylesheet" type="text/css" />
+<link href="css/mainform.css" rel="stylesheet" type="text/css" />
+
+<script src='https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js'></script>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript">
+    "use strict";
+    (function () {
+        if (returnCitySN != null) {
+            $(".location").html(returnCitySN.cname);
+        } else {
+            $(".location").html("Location:unknown");
+        }
+    }())
+</script>
+
+</body>
+</html>
