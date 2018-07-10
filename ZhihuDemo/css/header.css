@@ -37,15 +37,39 @@ div.h_content_search {
     outline:none;
 }
 
-.h_content_search button{
-    justify-content: flex-end;
-    background: transparent;
-    border: transparent;
-    outline:none;
+.h_content_search:hover {
+    width:400px;
+    background-color: white;
+    border-color: #78baff;
+    transition:width 1s;
 }
+
+button.Icon--search,
+button.Icon--search img{
+    justify-content: flex-end;
+    height: 16px;
+    width: 30px;
+    outline:none;
+    border: transparent;
+    background: transparent;
+}
+
+button.Icon--profile ,
+button.Icon--profile img {
+    background: transparent;
+    width: 1.2em;
+    height: 1.2em;
+    font-size: 20px;
+}
+
 
 div.h_content_person {
     display: flex;
     flex: 1;
     justify-content: flex-end;  /* important block末尾 main axis */
+}
+
+svg.Icon--search {
+    height: 16px;
+    width: 16px;
 }

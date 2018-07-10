@@ -16,19 +16,36 @@
             <div>
                 <div class="h_content_search">
                     <input type="text" placeholder="搜索">
-                    <button type="button">搜索</button>
+                    <button class="Icon Icon--search">
+                        <img src="img/search_icon.svg" alt="search">
+                    </button>
                 </div>
             </div>
             <div class="h_content_person">
-                <button>login</button>
+                <button class="Icon Icon--profile">
+                    <img src="img/profile_icon.svg" alt="profile">
+                </button>
             </div>
         </div>
     </header>
     <main>
         <div class="m_content">
-            <div class="m_content_main">
-                <div class="m_content_m_card">
-                    <h2>hello world</h2>
+            <div class="m_content_items">
+                <div class="Card">
+                    <div class="top_card_nav">
+                        <a>提问</a>
+                        <div>
+                            <a>回答</a>
+                            <a>写文章</a>
+                        </div>
+                    </div>
+                    <a class="top_card_right">
+                        草稿
+                    </a>
+                </div>
+                <div class="Card HomeMainItem">
+                    <a>Hello World</a>
+                    <p>This is zhihu page.</p>
                 </div>
             </div>
             <div class="m_content_side">
@@ -39,10 +56,11 @@
 </div>
 <body>
 
+
 <!-- flex布局 -->
 <link rel="stylesheet" type="text/css" href="css/body.css">
 <link rel="stylesheet" type="text/css" href="css/header.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/content.css">
 
 </body>
 </html>
