@@ -38,6 +38,7 @@ input.m_form_submit {
     font-size: 1.5em;
     background: #ffe699;
     border: 1px solid #ffe699;
+    cursor:pointer;
 }
 
 input.m_form_input:focus {

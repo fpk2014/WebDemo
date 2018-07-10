@@ -1,0 +1,51 @@
+header {
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    color: #999;
+}
+
+div.h_content{
+    display: flex;  /* important 文本居中*/
+    width:1000px;
+    height:52px;
+    margin:0 auto;   /* important div 居中，没有float */
+    align-items: center;  /* important 文字垂直居中(block) cross axis */
+}
+
+nav a {
+    margin-right: 18px;
+    margin-left: 27px;
+}
+
+div.h_content_search {
+    display: flex;
+    align-items: center;
+    height: 34px;
+    width: 326px;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background: #f6f6f6;
+}
+
+.h_content_search input{
+    flex: 1;
+    height: 24px;
+    margin-left: 10px;
+    border: none;
+    background: transparent;
+    outline:none;
+}
+
+.h_content_search button{
+    justify-content: flex-end;
+    background: transparent;
+    border: transparent;
+    outline:none;
+}
+
+div.h_content_person {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;  /* important block末尾 main axis */
+}
