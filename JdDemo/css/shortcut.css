@@ -11,6 +11,10 @@ div.location.dropdown_content {
     padding: 10px;
 }
 
+div.shortcut_company.dropdown_content {
+    width: 150px;
+}
+
 .shortcut .dropdown_content{
     top: 30px;
 }

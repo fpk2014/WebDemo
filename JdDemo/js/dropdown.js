@@ -14,10 +14,11 @@ function dropdownShowHide(title, str) {
         _ => {
             $(dropdown_content).hide();
             $(title+".dropdown_title").css({
-                "border": "none",
+                "border": "1px solid transparent",
                 "background-color":"#e3e4e5"
             });
-        });
+        }
+    );
 }
 
 function showLocationDrop(){
@@ -36,10 +37,22 @@ function showLocationDrop(){
         cities_str += '<div class="item"><a>' + cities[i] + '</a></div>';
     }
     //console.log(cities_str);
-    dropdownShowHide(".location", cities_str)
+    dropdownShowHide(".location", cities_str);
+}
+
+function showShortcutCompanyDrop(){
+    let province = ["企业购","商用场景馆","工业品","礼品卡"];
+    let cities_str = "";
+    let cities = Object.keys(province);  /* important */
+    for (let i = 0; i < cities.length; i++) {
+        cities_str += '<div class="item"><a>' + province[i] + '</a></div>';
+    }
+    //console.log(cities_str);
+    dropdownShowHide(".shortcut_company", cities_str)
 }
 
 $(document).ready(function () {
     "use strict";
     showLocationDrop();
+    showShortcutCompanyDrop();
 });
