@@ -1,0 +1,75 @@
+.header .w {
+    position: relative;
+    height: 140px;
+}
+.header .w div {
+    position: absolute;
+    background-color: #fff;
+}
+.logo_scene_img {
+    width: 190px;
+    height: 170px;
+    background-image: url(http://img1.360buyimg.com/da/jfs/t22489/150/239940877/125954/8eb412f/5b29cbf3Nbbaa5934.gif?v=0.36326576960593626);
+}
+
+#logo {
+    top: -31px;
+}
+
+#search {
+    position: absolute;
+    left: 320px;
+    top: 25px;
+    width: 550px;
+    height: 35px;
+}
+
+#search input[type='text'] {
+    float: left;
+    left: 0;
+    padding: 4px 44px 4px 4px;
+    width: 450px;
+    height: 25px;
+    border: 1px solid transparent;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+#search button{
+    float: left;
+    border-radius: 0;
+    right: 0;
+    width: 50px;
+    height: 35px;
+    line-height: 35px;
+    border: none;
+    background-color: #f10215;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#search {
+    position: absolute;
+    right: 99px;
+    top: 25px;
+}
+
+#settleup {
+    position: absolute;
+    right: 280px;
+    top: 25px;
+    z-index: 21;
+}
+
+#settleup a{
+    color: red;
+}
+
+.settleup_icon{
+    width: 188px;
+    height: 33px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 33px;
+}

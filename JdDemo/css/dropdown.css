@@ -1,0 +1,19 @@
+.item {
+    float: left;
+    width: 60px;
+    padding: 2px 0;
+}
+
+.dropdown_title {
+    position: relative; /* important */
+    z-index: 100;
+    margin-bottom: -1px;
+    background-color: transparent;
+}
+
+.dropdown_content {
+    position: absolute;
+    z-index: 99;
+    border: 1px solid gray;
+    background-color: white;
+}

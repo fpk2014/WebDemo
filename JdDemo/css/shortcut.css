@@ -1,0 +1,43 @@
+div.location {
+    margin-left: 100px;
+}
+
+div.location.dropdown_title {
+    float:left;
+}
+
+div.location.dropdown_content {
+    width: 300px;
+    padding: 10px;
+}
+
+.shortcut .dropdown_content{
+    top: 30px;
+}
+
+.s_profile  {
+    float:right;
+}
+
+
+.s_profile div {
+    display: inline-block;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.dropdown_title div{
+    display: inline-block;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+
+i.arrow_down {
+    border:  solid red;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 3px;
+    transform: rotate(45deg);
+}
