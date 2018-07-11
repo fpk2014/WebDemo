@@ -1,3 +1,5 @@
+"use strict";
+
 function dropdownShowHide(title, str) {
     let dropdown_content = title+".dropdown_content";
     $(dropdown_content).prepend(str).hide();
@@ -21,7 +23,17 @@ function dropdownShowHide(title, str) {
     );
 }
 
-function showLocationDrop(){
+function showDrop(ot, dropname) {
+    let text = "";
+    let c = Object.keys(ot);  /* important */
+    for (let i = 0; i < c.length; i++) {
+        text += '<div class="item"><a>' + c[i] + '</a></div>';
+    }
+    //console.log(text);
+    dropdownShowHide(dropname, text)
+}
+
+$(document).ready(function () {
     let province = {
         "北京": 1, "上海": 2, "天津": 3, "重庆": 4, "河北": 5,
         "山西": 6, "河南": 7, "辽宁": 8, "吉林": 9, "黑龙江": 10,
@@ -31,28 +43,7 @@ function showLocationDrop(){
         "西藏": 26, "陕西": 27, "甘肃": 28, "青海": 29, "宁夏": 30,
         "新疆": 31, "港澳": 52993, "台湾": 32, "钓鱼岛": 84, "海外": 53283
     };
-    let cities_str = "";
-    let cities = Object.keys(province);  /* important */
-    for (let i = 0; i < cities.length; i++) {
-        cities_str += '<div class="item"><a>' + cities[i] + '</a></div>';
-    }
-    //console.log(cities_str);
-    dropdownShowHide(".location", cities_str);
-}
-
-function showShortcutCompanyDrop(){
-    let province = ["企业购","商用场景馆","工业品","礼品卡"];
-    let cities_str = "";
-    let cities = Object.keys(province);  /* important */
-    for (let i = 0; i < cities.length; i++) {
-        cities_str += '<div class="item"><a>' + province[i] + '</a></div>';
-    }
-    //console.log(cities_str);
-    dropdownShowHide(".shortcut_company", cities_str)
-}
-
-$(document).ready(function () {
-    "use strict";
-    showLocationDrop();
-    showShortcutCompanyDrop();
+    let shortcut_company = {"企业购":0,"商用场景馆":1,"工业品":2,"礼品卡":3};
+    showDrop(province, ".location");
+    showDrop(shortcut_company,".shortcut_company");
 });

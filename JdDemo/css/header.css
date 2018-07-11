@@ -9,11 +9,16 @@
 .logo_scene_img {
     width: 190px;
     height: 170px;
-    background-image: url(http://img1.360buyimg.com/da/jfs/t22489/150/239940877/125954/8eb412f/5b29cbf3Nbbaa5934.gif?v=0.36326576960593626);
+    background-image: url(http://misc.360buyimg.com/mtd/pc/index_2017/2.1.0/static/images/sprite.head.png);
 }
 
 #logo {
     top: -31px;
+    width: 190px;
+    height: 170px;
+    -webkit-box-shadow: 0 -12px 10px rgba(0,0,0,.2);
+    box-shadow: 0 -12px 10px rgba(0,0,0,.2);
+    border-bottom: 1px solid #ededed;
 }
 
 #search {
@@ -72,4 +77,38 @@
     background-color: #fff;
     text-align: center;
     line-height: 33px;
+}
+
+#hotwords {
+    overflow: hidden;
+    position: absolute;
+    left: 320px;
+    top: 65px;
+    width: 550px;
+    height: 20px;
+    line-height: 20px;
+    background: transparent;
+}
+
+#hotwords a{
+    margin-right: 10px;
+}
+
+#navitems {
+    overflow: hidden;
+    position: absolute;
+    left: 200px;
+    bottom: 0;
+    width: 790px;
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background: transparent;
+}
+#navitems a{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    margin-left: 30px;
+    color:#333;
 }

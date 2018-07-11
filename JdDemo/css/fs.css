@@ -1,0 +1,68 @@
+.fs {
+    margin-bottom: 30px;
+}
+
+.fs_inner {
+    margin: 0 auto;
+    height: 480px;
+    width: 1190px;
+}
+
+.fs_inner div {
+    position: relative;
+}
+
+.fs_col1, .fs_col2 {
+    float: left;
+    height: 480px;
+    margin-right: 10px;
+}
+
+.fs_col1 {
+    width: 190px;
+    background-color: white;
+}
+.fs_col2 {
+    width:  590px;
+}
+
+.fs_col3, .fs_col4 {
+    width: 190px;
+    height: 480px;
+}
+
+.fs_col3 {
+    float: left;
+}
+.fs_col4 {
+    float: right;
+    background-color: white;
+}
+
+.fs_col2 button {
+    z-index: 50;
+}
+
+.fs_col2 .slider_list img {
+    z-index: 0;
+}
+
+.fs_col2 .focus_item_img img{
+    z-index: 2;
+}
+
+
+.fs_col2 .slider_control_prev{
+    position: absolute;
+    top:50%;
+}
+
+.fs_col2 .slider_control_next{
+    position: absolute;
+    top:50%;
+    right:0;
+}
+
+.fs_col2 .slider_list img{
+    position:absolute;
+}
