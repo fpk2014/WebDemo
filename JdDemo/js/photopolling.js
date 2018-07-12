@@ -1,10 +1,10 @@
 "use strict";
 
-let slider=[".s_li li", ".slider_indicator i"];
+var slider=[".s_li li", ".slider_indicator i"];
 
 function poll(length,  key){
-    let str=[];
-    let i;
+    var str=[];
+    var i;
     for(i=0; i<length; i++){
         str[i]="item_img";
     }
@@ -16,9 +16,9 @@ function poll(length,  key){
 }
 
 function skipPoll(slider, key){
-    let str = poll($(slider[0]).length, key);
-    let length = str.length;
-    let i;
+    var str = poll($(slider[0]).length, key);
+    var length = str.length;
+    var i;
     for(i=0; i<length; i++){
         slider.forEach(
             function (x){$($(x)[i]).attr("class",str[i]);}
@@ -27,14 +27,14 @@ function skipPoll(slider, key){
 }
 
 function rightPoll(slider) {
-    let key=parseInt($(".focus_item_img").attr("clstag"))+1;
+    var key=parseInt($(".focus_item_img").attr("clstag"))+1;
     if(key>$(slider[0]).length)
         key=1;
     skipPoll(slider, key);
 }
 
 function leftPoll(slider) {
-    let key=parseInt($(".focus_item_img").attr("clstag"))-1;
+    var key=parseInt($(".focus_item_img").attr("clstag"))-1;
     if(key<1)
         key=$(slider[0]).length;
     skipPoll(slider, key);
