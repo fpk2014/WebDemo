@@ -1,48 +1,52 @@
 "use strict";
 
-function Dropdown(dropname, str) {
+function Dropdown(dropname) {
     this.dropname = dropname+".dropdown";
     this.dropdown_title = dropname+".dropdown_title";
     this.dropdown_content = dropname+".dropdown_content";
-    this.str = str;
 }
 
 Dropdown.prototype = {
     constructor:Dropdown,
-    text: function(){
+    text: function(insert_map, items_name){
+        if(insert_map==null || items_name==null)
+            throw new Error("insert_map or items_name is null;");
         var ret = "";
-        var c = Object.keys(this.str);  /* important */
+        var c = Object.keys(insert_map);  /* important */
         for (var i = 0; i < c.length; i++) {
-            ret += '<div class="item"><a>' + c[i] + '</a></div>';
+            ret += '<div class='+items_name+'><a>' + c[i] + '</a></div>';
         }
         //console.log(text);
         return ret;
     },
     append: function(insert_text){
-        $(this.dropdown_content).prepend(insert_text).hide();
-        var dt = this.dropdown_title;
-        var dc = this.dropdown_content;
-        $(this.dropname).hover(
+        if(insert_text==null)
+            throw new Error("insert_text is null;");
+        var self = this;
+        $(self.dropdown_content).prepend(insert_text).hide();
+        $(self.dropname).hover(
             function () {
-                $(dc).show();
-                //console.log(dc);
-                $(dt).css({  //不能使用this.dropdown_title; this已经改变
+                $(self.dropdown_content).show();
+                //console.log(self.dropdown_title);
+                $(self.dropdown_title).css({  //不能使用this.dropdown_title; this已经改变
                     "border": "1px solid gray",
                     "border-bottom": "none",
                     "background-color":"white"
                 });
             },
             function () {
-                $(dc).hide();
-                $(dt).css({
+                $(self.dropdown_content).hide();
+                $(self.dropdown_title).css({
                     "border": "1px solid transparent",
-                    "background-color":"#e3e4e5"
+                    "background-color":"transparent"
                 });
             }
         );
     },
-    start: function () {
-        this.append(this.text());
+    start: function (insert_map, items_name) {
+        if(insert_map==null || items_name==null)
+            throw new Error("insert_map or items_name is null;");
+        this.append(this.text(insert_map, items_name));
     }
 };
 
@@ -56,8 +60,20 @@ $(document).ready(function () {
         "西藏": 26, "陕西": 27, "甘肃": 28, "青海": 29, "宁夏": 30,
         "新疆": 31, "港澳": 52993, "台湾": 32, "钓鱼岛": 84, "海外": 53283
     };
+    var global_cities = {
+        "Global Site":100, "Сайт России":101, "Situs Indonesia":102, "Sitio de España":103
+    };
+    var J_user = {
+        "待处理订单":0, "消息":1, "返修退换货":2, "我的回答":3, "降价商品":4, "我的关注":5,
+    }
     var shortcut_company = {"企业购":0,"商用场景馆":1,"工业品":2,"礼品卡":3};
 
-    new Dropdown(".location", province).start();
-    new Dropdown(".shortcut_company", shortcut_company).start();
+    var tmp = new Dropdown(".location");
+    var tmp_text = tmp.text(province, 'item')+"<hr>"+tmp.text(global_cities, 'global_cities_items');
+    tmp.append(tmp_text);
+    //new Dropdown(".location").start(province, 'item');
+    // tmp=new Dropdown(".location");tmp.append(tmp.text(province, 'item'));
+
+    new Dropdown(".shortcut_company").start(shortcut_company, 'item');
+    new Dropdown(".J_user").start(J_user, 'user_item');
 });

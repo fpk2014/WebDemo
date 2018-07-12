@@ -1,0 +1,159 @@
+.floors #J_seckill{
+    height: 275px;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+.floors .sk_hd {
+    position: relative;
+    float: left;
+    width: 190px;
+    height: 275px;
+    background: #e83632;
+    color: #fff;
+}
+
+.floors .sk_hd {
+    float: left;
+}
+
+.sk_cd {
+    position: absolute;
+    top: 212px;
+    left: 30px;
+    height: 40px;
+    background-color: #2f3430;
+}
+
+.sk_cd::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 50%;
+    height: 1px;
+    background: #e83632;
+}
+
+.sk_cd .cd_hour {
+    float: left;
+    position: relative;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sk_cd .cd_minute {
+    float: left;
+    position: relative;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sk_cd .cd_second {
+    float: left;
+    position: relative;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sk_cd .cd_item {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
+
+.sk_cd  .cd_item_txt {
+    position: relative;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.floors .sk_list {
+    position: relative;
+    float: left;
+    width: 799px;
+    border-right: solid 1px #f0f0f0;
+    height: 275px;
+    overflow: hidden;
+}
+
+.floors .sk_chn {
+    position: relative;
+    float: left;
+    width: 180px;
+    height: 260px;
+    padding: 8px 10px 7px;
+}
+
+.floors .sk_list_inner {
+    position: relative;
+    width: 800px;
+    height: 275px;
+    overflow: hidden;
+}
+
+.floors .sk_list_inner div {
+    float: left;
+    width: 200px;
+    height: 275px;
+}
+
+.floors .sk_item_img{
+    position: relative;
+}
+
+.floors .sk_item_img::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 275px;
+    background: #f0f0f0;
+}
+
+.floors .sk_item_img img{
+    position: absolute;
+    top:20%;
+    left:20%;
+}
+
+.sk_hd_lk .sk_tit{
+    position: absolute;
+    font-family: 'fzzxh';
+    left: 0;
+    width: 100%;
+    text-align: center;
+    top: 42px;
+    font-size: 36px;
+    font-size: 34px;
+    color:white;
+}
+
+.sk_hd_lk .sk_subtit{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    top: 90px;
+    color: #f19999;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+}
+
+.sk_hd_lk .sk_desc {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    top: 170px;
+    font-size: 16px;
+    color:white;
+}

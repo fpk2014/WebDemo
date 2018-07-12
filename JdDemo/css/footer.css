@@ -1,0 +1,105 @@
+.footer a {
+    color: #666;
+}
+
+.footer a:link {
+    color: #666;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+.footer-top-slogen {
+    width: 100%;
+    height: 54px;
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 16px;
+    background-color: #F5F5F5;
+}
+.footer-top-slogen-icon {
+    position: absolute;
+    /*top: 20px;*/
+    left: 50%;
+}
+.footer-top-slogen-icon1 {
+    margin-left: -604px;
+}
+.footer-top-slogen-icon2 {
+    margin-left: -302px;
+}
+.footer-top-slogen-icon4 {
+    margin-left: 302px;
+}
+.footer-top-shopping dl {
+    float: left;
+    width: 200px;
+}
+dl.last-dl {
+    width: 100px;
+}
+.footer-top-shopping dt,
+.coverage h3 {
+    height: 34px;
+    font: 400 16px/34px "microsoft yahei";
+}
+.footer-top-shopping dd {
+    line-height: 20px;
+}
+.coverage {
+    width: 186px;
+    height: 169px;
+    float: right;
+    margin-right: 60px;
+    padding-left: 17px;
+    background: url(../img/china.png) no-repeat left bottom;
+}
+.coverage p {
+    padding-top: 8px;
+}
+.coverage a {
+    float: right;
+}
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px 0 30px;
+    border-top: 1px solid #E5E5E5;
+}
+.footer-bottom-links a {
+    margin: 0 10px;
+}
+.footer-bottom-copyright {
+    padding: 10px 0;
+}
+.footer-bottom-img a {
+    margin: 0 5px;
+}
+/*footer部分end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

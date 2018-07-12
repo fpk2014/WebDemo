@@ -9,8 +9,9 @@ body {
     background-color: #f0f3ef;
 }
 
-a {
+a, button {
     cursor: pointer;
+    text-decoration: none;
 }
 
 li {

@@ -26,6 +26,11 @@
     width:  590px;
 }
 
+.fs_col2 .focus_list{
+    position: relative;
+    height: 100%;
+}
+
 .fs_col3, .fs_col4 {
     width: 190px;
     height: 480px;
@@ -36,11 +41,14 @@
 }
 .fs_col4 {
     float: right;
-    background-color: white;
 }
 
 .fs_col2 button {
     z-index: 50;
+}
+
+.fs_col2 div {
+    margin-top: 10px;
 }
 
 .fs_col2 .slider_list img {
@@ -85,4 +93,98 @@
 
 .fs_col2 .slider_indicator i.focus_item_img{
     color: white;
+}
+
+.fs_col3  .rec_inner div {
+    width: 190px;
+    height: 150px;
+    margin-top: 10px;
+}
+
+.fs_col3 .rec_item:hover {
+    opacity: .7;
+}
+
+.fs_col4 #J_user {
+    height: 150px;
+    background: #fff;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.fs_col4 #J_news {
+    overflow: hidden;
+    height: 130px;
+    background: #fff;
+}
+
+.fs_col4 #J_service {
+    padding-top: 0;
+    height: 190px;
+    background: #fff;
+}
+
+.fs_col4 .user_inner {
+    position: relative;
+    padding-top: 62px;
+    height: 78px;
+}
+
+.fs_col4 .user_avatar {
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    margin-left: -34px;
+    width: 65px;
+    height: 65px;
+    border: 5px solid #e3e1df;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-box-shadow: 3px 6px 25px #c3c3c3;
+    -moz-box-shadow: 3px 6px 25px #c3c3c3;
+    box-shadow: 3px 6px 25px #c3c3c3;
+}
+
+.user_avatar img{
+    width: 55px;
+    height: 55px;
+}
+
+.news_inner{
+    position: relative;
+    font-size: 12px;
+    padding: 8px 0 0;
+    position: relative;
+    line-height: 13px;
+
+}
+
+.news_inner a{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.news_inner .final {
+    position: absolute;
+    padding-right: 0;
+    right: 12px;
+}
+
+.service_inner{
+    position: relative;
+    font-size: 12px;
+    padding: 8px 0 0;
+    position: relative;
+    line-height: 13px;
+
+}
+
+.service_inner a{
+    padding-right: 12px;
+    padding-left: 12px;
+}
+.service_inner .final {
+    position: absolute;
+    padding-right: 0;
+    right: 12px;
 }

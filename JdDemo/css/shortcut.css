@@ -3,43 +3,19 @@
 }
 
 div.location {
-    margin-left: 100px;
-}
-
-div.location.dropdown_title {
     float:left;
-}
-
-div.location.dropdown_content {
-    width: 300px;
-    padding: 10px;
-}
-
-div.shortcut_company.dropdown_content {
-    width: 150px;
-}
-
-.shortcut .dropdown_content{
-    top: 30px;
+    margin-left: 100px;
 }
 
 .s_profile  {
     float:right;
 }
 
-
 .s_profile div {
     float:left;
     padding-left: 7px;
     padding-right: 7px;
 }
-
-.dropdown_title div{
-    display: inline-block;
-    padding-left: 7px;
-    padding-right: 7px;
-}
-
 
 i.arrow_down {
     border:  solid red;
