@@ -1,37 +1,50 @@
 "use strict";
 
-function dropdownShowHide(title, str) {
-    var dropdown_content = title+".dropdown_content";
-    $(dropdown_content).prepend(str).hide();
-    $(title+".dropdown").hover(
-        function () {
-            //console.log(name);
-            $(dropdown_content).show();
-            $(title+".dropdown_title").css({
-                "border": "1px solid gray",
-                "border-bottom": "none",
-                "background-color":"white"
-            });
-        },
-        function () {
-            $(dropdown_content).hide();
-            $(title+".dropdown_title").css({
-                "border": "1px solid transparent",
-                "background-color":"#e3e4e5"
-            });
-        }
-    );
+function Dropdown(dropname, str) {
+    this.dropname = dropname+".dropdown";
+    this.dropdown_title = dropname+".dropdown_title";
+    this.dropdown_content = dropname+".dropdown_content";
+    this.str = str;
 }
 
-function showDrop(ot, dropname) {
-    var text = "";
-    var c = Object.keys(ot);  /* important */
-    for (var i = 0; i < c.length; i++) {
-        text += '<div class="item"><a>' + c[i] + '</a></div>';
+Dropdown.prototype = {
+    constructor:Dropdown,
+    text: function(){
+        var ret = "";
+        var c = Object.keys(this.str);  /* important */
+        for (var i = 0; i < c.length; i++) {
+            ret += '<div class="item"><a>' + c[i] + '</a></div>';
+        }
+        //console.log(text);
+        return ret;
+    },
+    append: function(insert_text){
+        $(this.dropdown_content).prepend(insert_text).hide();
+        var dt = this.dropdown_title;
+        var dc = this.dropdown_content;
+        $(this.dropname).hover(
+            function () {
+                $(dc).show();
+                //console.log(dc);
+                $(dt).css({  //不能使用this.dropdown_title; this已经改变
+                    "border": "1px solid gray",
+                    "border-bottom": "none",
+                    "background-color":"white"
+                });
+            },
+            function () {
+                $(dc).hide();
+                $(dt).css({
+                    "border": "1px solid transparent",
+                    "background-color":"#e3e4e5"
+                });
+            }
+        );
+    },
+    start: function () {
+        this.append(this.text());
     }
-    //console.log(text);
-    dropdownShowHide(dropname, text)
-}
+};
 
 $(document).ready(function () {
     var province = {
@@ -44,6 +57,7 @@ $(document).ready(function () {
         "新疆": 31, "港澳": 52993, "台湾": 32, "钓鱼岛": 84, "海外": 53283
     };
     var shortcut_company = {"企业购":0,"商用场景馆":1,"工业品":2,"礼品卡":3};
-    showDrop(province, ".location");
-    showDrop(shortcut_company,".shortcut_company");
+
+    new Dropdown(".location", province).start();
+    new Dropdown(".shortcut_company", shortcut_company).start();
 });
