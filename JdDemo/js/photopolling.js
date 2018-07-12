@@ -1,53 +1,60 @@
 "use strict";
 
-function rightPoll() {
-    let s_li = $(".s_li").children();
-    let length = s_li.length;
-    let img_str = [];
-    s_li.each(x=>{img_str[x]=$(s_li[x]).attr("class");});
+let slider=[".s_li li", ".slider_indicator i"];
 
-    /*
-        var tmp = img_str[length-1];
-        for(var i=length-1; i>0; i--){
-            img_str[i] = img_str[i-1];
-        }
-        img_str[0] = tmp;
-    */
-    img_str.unshift(img_str.pop());
+function poll(length,  key){
+    let str=[];
+    let i;
+    for(i=0; i<length; i++){
+        str[i]="item_img";
+    }
+    str[key-1]="focus_item_img";
+    key<length?str[key]="focus_item_img_next":str[0]="focus_item_img_next";
+    key-2>0?str[key-2]="focus_item_img_prev":str[length-1]="focus_item_img_prev";
+    //console.log(str);
+    return str;
+}
 
-    for(let i=0; i<length; i++){
-        $(s_li[i]).attr("class",img_str[i]);
+function skipPoll(slider, key){
+    let str = poll($(slider[0]).length, key);
+    let length = str.length;
+    let i;
+    for(i=0; i<length; i++){
+        slider.forEach(
+            x=>{$($(x)[i]).attr("class",str[i]);}
+        );
     }
 }
 
-function leftPoll() {
-    let s_li = $(".s_li").children();
-    let length = s_li.length;
-    let img_str = [];
-    s_li.each(x=>{img_str[x]=$(s_li[x]).attr("class");});
+function rightPoll(slider) {
+    let key=parseInt($(".focus_item_img").attr("clstag"))+1;
+    if(key>$(slider[0]).length)
+        key=1;
+    skipPoll(slider, key);
+}
 
-    img_str[length-1]=img_str.shift();
-
-    for(let i=0; i<length; i++){
-        $(s_li[i]).attr("class",img_str[i]);
-    }
+function leftPoll(slider) {
+    let key=parseInt($(".focus_item_img").attr("clstag"))-1;
+    if(key<1)
+        key=$(slider[0]).length;
+    skipPoll(slider, key);
 }
 
 $(document).ready(function () {
-    //$("focus_item_img").css("z-index", "0");
-    //  $("focus_item_img_next").css("z-index", "2");
-
-    //next
     setInterval(function(){
-        console.log("run");
-        rightPoll();
+        rightPoll(slider);
     },3000);
 });
 
 $(".slider_control_prev").click(function () {
-    leftPoll();
+    leftPoll(slider);
 });
 
 $(".slider_control_next").click(function () {
-    rightPoll();
+    rightPoll(slider);
+});
+
+$(".slider_indicator i").click(function (x) {
+    //console.log($(x.currentTarget).attr("clstag"));
+    skipPoll(slider, $(x.currentTarget).attr("clstag"));
 });

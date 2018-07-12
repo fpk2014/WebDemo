@@ -66,3 +66,23 @@
 .fs_col2 .slider_list img{
     position:absolute;
 }
+
+.fs_col2 .slider_indicator{
+    position: absolute;
+    z-index: 50;
+    bottom:5%;
+    left:10%;
+}
+
+.fs_col2 .slider_indicator i{
+    position: relative;
+    line-height: 15px;
+    font-size:15px;
+    color: black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.fs_col2 .slider_indicator i.focus_item_img{
+    color: white;
+}
