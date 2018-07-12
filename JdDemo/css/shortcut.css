@@ -1,3 +1,7 @@
+.location {
+    float:left;
+}
+
 div.location {
     margin-left: 100px;
 }
@@ -25,7 +29,7 @@ div.shortcut_company.dropdown_content {
 
 
 .s_profile div {
-    display: inline-block;
+    float:left;
     padding-left: 7px;
     padding-right: 7px;
 }

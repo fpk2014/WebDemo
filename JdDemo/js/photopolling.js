@@ -21,7 +21,7 @@ function skipPoll(slider, key){
     let i;
     for(i=0; i<length; i++){
         slider.forEach(
-            x=>{$($(x)[i]).attr("class",str[i]);}
+            function (x){$($(x)[i]).attr("class",str[i]);}
         );
     }
 }
@@ -54,7 +54,7 @@ $(".slider_control_next").click(function () {
     rightPoll(slider);
 });
 
-$(".slider_indicator i").click(function (x) {
+$(".slider_indicator i").hover(function (x) {
     //console.log($(x.currentTarget).attr("clstag"));
     skipPoll(slider, $(x.currentTarget).attr("clstag"));
 });

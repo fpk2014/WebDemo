@@ -18,8 +18,8 @@ img.m_image_logo {
 
 .m_form input{
     display: inline-block;
+    height: 2em;
     align-items: center; /* important */
-    line-height: 2em;
 }
 
 input.m_form_input {

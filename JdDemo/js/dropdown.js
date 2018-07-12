@@ -4,7 +4,7 @@ function dropdownShowHide(title, str) {
     let dropdown_content = title+".dropdown_content";
     $(dropdown_content).prepend(str).hide();
     $(title+".dropdown").hover(
-        _ => {
+        function () {
             //console.log(name);
             $(dropdown_content).show();
             $(title+".dropdown_title").css({
@@ -13,7 +13,7 @@ function dropdownShowHide(title, str) {
                 "background-color":"white"
             });
         },
-        _ => {
+        function () {
             $(dropdown_content).hide();
             $(title+".dropdown_title").css({
                 "border": "1px solid transparent",
