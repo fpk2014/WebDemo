@@ -136,22 +136,29 @@
         }
         /*sk_hd sk_cd 结束*/
 
+        /*sk_bd sk_chn 开始*/
+        .sk_chn_list{
+            overflow: hidden;
+            width: 180px;
+            height: 260px;
+        }
+        /*sk_bd sk_chn 结束*/
+
             /*sk_bd sk_list sk_list_inner开始*/
             .sk_list_inner {
-                position: relative;
                 width: 800px;
                 height: 275px;
                 overflow: hidden;
             }
 
-            .sk_item {
+            .sk_item_img {
                 position: relative;
                 float: left;
                 width: 200px;
                 height: 275px;
             }
 
-            .sk_item::after {
+            .sk_item_img::after {
                 content: '';
                 display: block;
                 position: absolute;
@@ -162,9 +169,36 @@
                 background: #f0f0f0;
             }
 
-            .sk_item_inner {
+            .sk_item_img img{
                 position: absolute;
                 top: 20%;
                 left: 20%;
             }
             /*sk_bd sk_list sk_list_inner结束*/
+
+            /*sk_bd sk_chn sk_chn_list 开始*/
+            .sk_chn_list .slider_list li{
+                position: absolute;
+                width: 180px;
+                height: 260px;
+            }
+
+            .sk_chn_list .slider_list .focus_item_img{
+                z-index: 2;
+            }
+
+            .sk_chn_list .slider_indicator{
+                position: absolute;
+                z-index: 50;
+                bottom: 5%;
+                left: 45%;
+            }
+
+            .sk_chn_list .slider_indicator i{
+                color:black;
+            }
+
+            .sk_chn_list .slider_indicator .focus_item_img{
+                color:red;
+            }
+            /*sk_bd sk_chn sk_chn_list 结束*/

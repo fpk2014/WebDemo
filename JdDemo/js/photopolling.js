@@ -1,67 +1,74 @@
 "use strict";
 
-var slider=[".s_li li", ".slider_indicator i"];
+/*z-index实现*/
 
-function poll(length,  key){
-    var str=[];
-    var i;
-    for(i=0; i<length; i++){
-        str[i]="item_img";
+if (!Array.prototype.forEach) {
+    Array.prototype.forEach = function(fn, scope) {
+        for(var i = 0, len = this.length; i < len; ++i) {
+            fn.call(scope, this[i], i, this);
+        }
     }
-    str[key-1]="focus_item_img";
-    key<length?str[key]="focus_item_img_next":str[0]="focus_item_img_next";
-    key-2>0?str[key-2]="focus_item_img_prev":str[length-1]="focus_item_img_prev";
-    //console.log(str);
-    return str;
+}
+
+function initialSlider(slider) {
+    var i, j=0;
+    var length = $(slider[0]).length;
+    for(i=0; i<length; i++){
+        slider.forEach(
+            function(x){$($(x)[i]).attr("clstag",j);
+            if(i===0)
+                $($(x)[i]).attr("class", "focus_item_img");
+            });
+        j++;
+    }
 }
 
 function skipPoll(slider, key){
-    var str = poll($(slider[0]).length, key);
-    var length = str.length;
-    var i;
-    if (!Array.prototype.forEach) {
-        Array.prototype.forEach = function(fn, scope) {
-            for(var i = 0, len = this.length; i < len; ++i) {
-                fn.call(scope, this[i], i, this);
-            }
-        }
-    }
-    for(i=0; i<length; i++){
-        slider.forEach(
-            function (x){$($(x)[i]).attr("class",str[i]);}
-        );
-    }
+    var fc=parseInt($(slider[0]+".focus_item_img").attr("clstag"));
+    slider.forEach(function (x){$($(x)[fc]).attr("class", "");});
+    slider.forEach(function (x){$($(x)[key]).attr("class", "focus_item_img");});
 }
 
 function rightPoll(slider) {
-    var key=parseInt($(".focus_item_img").attr("clstag"))+1;
-    if(key>$(slider[0]).length)
-        key=1;
+    var key=parseInt($(slider[0]+".focus_item_img").attr("clstag"))+1;
+    if(key>$(slider[0]).length-1)
+        key=0;
+    //console.log(key + "  " + $(slider[0]).length);
     skipPoll(slider, key);
 }
 
 function leftPoll(slider) {
-    var key=parseInt($(".focus_item_img").attr("clstag"))-1;
-    if(key<1)
-        key=$(slider[0]).length;
+    var key=parseInt($(slider[0]+".focus_item_img").attr("clstag"))-1;
+    if(key<0)
+        key=$(slider[0]).length-1;
     skipPoll(slider, key);
 }
 
-$(document).ready(function () {
-    setInterval(function(){
-        rightPoll(slider);
-    },3000);
-});
 
-$(".slider_control_prev").click(function () {
-    leftPoll(slider);
-});
+(function() {
+    var sliders = {".focus_list":[".focus_list .slider_list li", ".focus_list .slider_indicator i"],
+        ".sk_chn_list":[".sk_chn_list .slider_list li", ".sk_chn_list .slider_indicator i"]
+    };
+    for(var i in sliders){
+        //console.log(sliders[i]);
+        initialSlider(sliders[i]);
+        (function(i) {
+            $(document).ready(function () {
+                setInterval(function(){rightPoll(sliders[i]);},3000);
+            });
 
-$(".slider_control_next").click(function () {
-    rightPoll(slider);
-});
+            $(i+" .slider_control_prev").click(function () {
+                leftPoll(sliders[i]);
+            });
 
-$(".slider_indicator i").hover(function (x) {
-    //console.log($(x.currentTarget).attr("clstag"));
-    skipPoll(slider, $(x.currentTarget).attr("clstag"));
-});
+            $(i+" .slider_control_next").click(function () {
+                rightPoll(sliders[i]);
+            });
+
+            $(i+" .slider_indicator i").hover(function (x) {
+                //console.log($(x.currentTarget).attr("clstag"));
+                skipPoll(sliders[i], $(x.currentTarget).attr("clstag"));
+            });
+        })(i);
+    }
+})();
