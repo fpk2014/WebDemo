@@ -1,5 +1,5 @@
 .header .w {
-    position: relative;
+    position: relative; /* important */
     height: 140px;
 }
 
@@ -10,7 +10,7 @@
 .logo_scene_img {
     width: 190px;
     height: 170px;
-    background-image: url(http://misc.360buyimg.com/mtd/pc/index_2017/2.1.0/static/images/sprite.head.png);
+    background-image: url('../img/sprite.head.png');
 }
 
 #logo {
@@ -66,10 +66,6 @@
     right: 280px;
     top: 25px;
     z-index: 21;
-}
-
-#settleup a{
-    color: red;
 }
 
 .settleup_icon{

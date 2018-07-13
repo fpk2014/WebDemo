@@ -1,8 +1,11 @@
 .shortcut{
-    height: 30px;  /* 不会被继承 */
-    line-height: 30px;  /*import 文本垂直居中 */
     background-color: #e3e4e5;;   /* 不会被继承 */
     border-bottom: 1px solid #ddd;
+}
+
+.shortcut .w{
+    height: 30px;  /* 不会被继承 */
+    line-height: 30px;  /*import 文本垂直居中 */
 }
 
 .location {

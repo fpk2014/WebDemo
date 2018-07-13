@@ -11,7 +11,7 @@ a, button {
 }
 
 a:hover {
-    color: red;
+    color: red !important;
 }
 
 li {
@@ -24,18 +24,15 @@ body {
     background-color: #f0f3ef;
 }
 
-#root>div {
-    position: relative;
-}
-
 /*公共类*/
 .w {
-    margin: auto;
+    /* 版面居中 */
+    margin: 0 auto;
     width: 1190px;
 }
 
 .style-red {
-    color:red;;
+    color:red;
 }
 
 .arrow_down {
