@@ -1,19 +1,11 @@
-.header .w {
+.header_inner {
     position: relative; /* important */
     height: 140px;
 }
 
-.header .w div {
+#logo {
     position: absolute;
     background-color: #fff;
-}
-.logo_scene_img {
-    width: 190px;
-    height: 170px;
-    background-image: url('../img/sprite.head.png');
-}
-
-#logo {
     top: -31px;
     width: 190px;
     height: 170px;
@@ -22,58 +14,10 @@
     border-bottom: 1px solid #ededed;
 }
 
-#search {
-    position: absolute;
-    left: 320px;
-    top: 25px;
-    width: 550px;
-    height: 35px;
-}
-
-#search input[type='text'] {
-    float: left;
-    left: 0;
-    padding: 4px 44px 4px 4px;
-    width: 450px;
-    height: 25px;
-    border: 1px solid transparent;
-    line-height: 25px;
-    font-size: 14px;
-}
-
-#search button{
-    float: left;
-    border-radius: 0;
-    right: 0;
-    width: 50px;
-    height: 35px;
-    line-height: 35px;
-    border: none;
-    background-color: #f10215;
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-}
-
-#search {
+#settleup {
     position: absolute;
     right: 99px;
     top: 25px;
-}
-
-#settleup {
-    position: absolute;
-    right: 280px;
-    top: 25px;
-    z-index: 21;
-}
-
-.settleup_icon{
-    width: 188px;
-    height: 33px;
-    background-color: #fff;
-    text-align: center;
-    line-height: 33px;
 }
 
 #hotwords {
@@ -87,10 +31,6 @@
     background: transparent;
 }
 
-#hotwords a{
-    margin-right: 10px;
-}
-
 #navitems {
     overflow: hidden;
     position: absolute;
@@ -98,14 +38,71 @@
     bottom: 0;
     width: 790px;
     height: 40px;
-    margin: 0 auto;
     padding-top: 20px;
     background: transparent;
 }
-#navitems a{
-    height: 40px;
-    line-height: 40px;
-    font-size: 14px;
-    margin-left: 30px;
-    color:#333;
-}
+
+    #search .search_inner {
+        position: relative;
+        height: 60px;
+        margin: 0 auto;
+    }
+
+    #logo .logo_scene_img {
+        width: 190px;
+        height: 170px;
+        background-image: url('../img/sprite.head.png');
+    }
+
+    #search form {
+        position: absolute;
+        left: 320px;
+        top: 25px;
+        width: 550px;
+        height: 35px;
+    }
+
+    #search input[type='text'] {
+        float: left;
+        left: 0;
+        padding: 4px 44px 4px 4px;
+        width: 450px;
+        height: 25px;
+        border: 1px solid transparent;
+        line-height: 25px;
+        font-size: 14px;
+    }
+
+    #search button{
+        float: left;
+        border-radius: 0;
+        right: 0;
+        width: 50px;
+        height: 35px;
+        line-height: 35px;
+        border: none;
+        background-color: #f10215;
+        font-size: 20px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    #settleup .settleup_icon {
+        width: 188px;
+        height: 33px;
+        background-color: #fff;
+        text-align: center;
+        line-height: 33px;
+    }
+
+    #hotwords a{
+        margin-right: 10px;
+    }
+
+    #navitems a{
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        margin-left: 30px;
+        color:#333;
+    }

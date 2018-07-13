@@ -1,15 +1,10 @@
 .fs {
+    position:relative;
     margin-bottom: 30px;
 }
 
 .fs_inner {
-    margin: 0 auto;
     height: 480px;
-    width: 1190px;
-}
-
-.fs_inner div {
-    position: relative;
 }
 
 .fs_col1, .fs_col2 {
@@ -26,11 +21,6 @@
     width:  590px;
 }
 
-.fs_col2 .focus_list{
-    position: relative;
-    height: 100%;
-}
-
 .fs_col3, .fs_col4 {
     width: 190px;
     height: 480px;
@@ -39,152 +29,186 @@
 .fs_col3 {
     float: left;
 }
+
 .fs_col4 {
     float: right;
 }
 
-.fs_col2 button {
-    z-index: 50;
-}
+    /*fs_col1 开始*/
+    .fs_col1_inner {
+        position: relative;
+    }
 
-.fs_col2 div {
-    margin-top: 10px;
-}
+    .cate_menu {
+        overflow: hidden;
+        padding: 10px 0;
+        height: 460px;
+        background-color: #fefefe;
+        color: #636363;
+    }
 
-.fs_col2 .slider_list img {
-    z-index: 0;
-}
+    .cate_menu_item {
+        overflow: hidden;
+        padding-left: 18px;
+        height: 27px;
+        line-height: 27px;
+    }
+    /*fs_col1 结束*/
 
-.fs_col2 .focus_item_img img{
-    z-index: 2;
-}
+    /*fs_col2 开始*/
+    .fs_col2 .focus_list{
+        position: relative;
+        height: 100%;
+    }
 
 
-.fs_col2 .slider_control_prev{
-    position: absolute;
-    top:50%;
-}
+    .fs_col2 button {
+        z-index: 50;
+    }
 
-.fs_col2 .slider_control_next{
-    position: absolute;
-    top:50%;
-    right:0;
-}
+    .fs_col2 div {
+        margin-top: 10px;
+    }
 
-.fs_col2 .slider_list img{
-    position:absolute;
-}
+    .fs_col2 .slider_list img {
+        z-index: 0;
+    }
 
-.fs_col2 .slider_indicator{
-    position: absolute;
-    z-index: 50;
-    bottom:5%;
-    left:10%;
-}
+    .fs_col2 .focus_item_img img{
+        z-index: 2;
+    }
 
-.fs_col2 .slider_indicator i{
-    position: relative;
-    line-height: 15px;
-    font-size:15px;
-    color: black;
-    margin-right: 10px;
-    cursor: pointer;
-}
 
-.fs_col2 .slider_indicator i.focus_item_img{
-    color: white;
-}
+    .fs_col2 .slider_control_prev{
+        position: absolute;
+        top:50%;
+    }
 
-.fs_col3  .rec_inner div {
-    width: 190px;
-    height: 150px;
-    margin-top: 10px;
-}
+    .fs_col2 .slider_control_next{
+        position: absolute;
+        top:50%;
+        right:0;
+    }
 
-.fs_col3 .rec_item:hover {
-    opacity: .7;
-}
+    .fs_col2 .slider_list img{
+        position:absolute;
+    }
 
-.fs_col4 #J_user {
-    height: 150px;
-    background: #fff;
-    margin-top: 10px;
-    text-align: center;
-}
+    .fs_col2 .slider_indicator{
+        position: absolute;
+        z-index: 50;
+        bottom:5%;
+        left:10%;
+    }
 
-.fs_col4 #J_news {
-    overflow: hidden;
-    height: 130px;
-    background: #fff;
-}
+    .fs_col2 .slider_indicator i{
+        position: relative;
+        line-height: 15px;
+        font-size:15px;
+        color: black;
+        margin-right: 10px;
+        cursor: pointer;
+    }
 
-.fs_col4 #J_service {
-    padding-top: 0;
-    height: 190px;
-    background: #fff;
-}
+    .fs_col2 .slider_indicator i.focus_item_img{
+        color: white;
+    }
+    /*fs_col2 结束*/
 
-.fs_col4 .user_inner {
-    position: relative;
-    padding-top: 62px;
-    height: 78px;
-}
+    /*fs_col3 开始*/
+    .fs_col3  .rec_inner div {
+        width: 190px;
+        height: 150px;
+        margin-top: 10px;
+    }
 
-.fs_col4 .user_avatar {
-    position: absolute;
-    left: 50%;
-    top: -10px;
-    margin-left: -34px;
-    width: 65px;
-    height: 65px;
-    border: 5px solid #e3e1df;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    overflow: hidden;
-    -webkit-box-shadow: 3px 6px 25px #c3c3c3;
-    -moz-box-shadow: 3px 6px 25px #c3c3c3;
-    box-shadow: 3px 6px 25px #c3c3c3;
-}
+    .fs_col3 .rec_item:hover {
+        opacity: .7;
+    }
+    /*fs_col3 结束*/
 
-.user_avatar img{
-    width: 55px;
-    height: 55px;
-}
+    /*fs_col4 开始*/
+    .fs_col4 #J_user {
+        height: 150px;
+        background: #fff;
+        margin-top: 10px;
+        text-align: center;
+    }
 
-.news_inner{
-    position: relative;
-    font-size: 12px;
-    padding: 8px 0 0;
-    position: relative;
-    line-height: 13px;
+    .fs_col4 #J_news {
+        overflow: hidden;
+        height: 130px;
+        background: #fff;
+    }
 
-}
+    .fs_col4 #J_service {
+        padding-top: 0;
+        height: 190px;
+        background: #fff;
+    }
 
-.news_inner a{
-    padding-right: 15px;
-    padding-left: 15px;
-}
-.news_inner .final {
-    position: absolute;
-    padding-right: 0;
-    right: 12px;
-}
+    .fs_col4 .user_inner {
+        position: relative;
+        padding-top: 62px;
+        height: 78px;
+    }
 
-.service_inner{
-    position: relative;
-    font-size: 12px;
-    padding: 8px 0 0;
-    position: relative;
-    line-height: 13px;
+    .fs_col4 .user_avatar {
+        position: absolute;
+        left: 50%;
+        top: -10px;
+        margin-left: -34px;
+        width: 65px;
+        height: 65px;
+        border: 5px solid #e3e1df;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        overflow: hidden;
+        -webkit-box-shadow: 3px 6px 25px #c3c3c3;
+        -moz-box-shadow: 3px 6px 25px #c3c3c3;
+        box-shadow: 3px 6px 25px #c3c3c3;
+    }
+    /*fs_col4 结束*/
 
-}
+        /*fs_col4 开始*/
+        .user_avatar img{
+            width: 55px;
+            height: 55px;
+        }
 
-.service_inner a{
-    padding-right: 12px;
-    padding-left: 12px;
-}
-.service_inner .final {
-    position: absolute;
-    padding-right: 0;
-    right: 12px;
-}
+        .news_inner{
+            position: relative;
+            font-size: 12px;
+            padding: 8px 0 0;
+            line-height: 13px;
+
+        }
+
+        .news_inner a{
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .news_inner .final {
+            position: absolute;
+            padding-right: 0;
+            right: 12px;
+        }
+
+        .service_inner{
+            position: relative;
+            font-size: 12px;
+            padding: 8px 0 0;
+            line-height: 13px;
+
+        }
+
+        .service_inner a{
+            padding-right: 12px;
+            padding-left: 12px;
+        }
+        .service_inner .final {
+            position: absolute;
+            padding-right: 0;
+            right: 12px;
+        }
+        /*fs_col4 结束*/

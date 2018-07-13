@@ -3,22 +3,24 @@
     border-bottom: 1px solid #ddd;
 }
 
-.shortcut .w{
+.shortcut_inner {
     height: 30px;  /* 不会被继承 */
     line-height: 30px;  /*import 文本垂直居中 */
 }
 
-.location {
-    float:left;
-    margin-left: 100px;  /* 不会被继承 */
-}
+    /*shortcut_inner 开始*/
+    .location {
+        float:left;
+        margin-left: 100px;  /* 不会被继承 */
+    }
 
-.s_profile {
-    float:right;
-}
+    .s_profile {
+        float:right;
+    }
 
-.s_profile div{
-    float:left;
-    padding-left: 7px;
-    padding-right: 7px;
-}
+    .s_profile div{
+        float:left;
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    /*shortcut_inner 结束*/
