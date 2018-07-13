@@ -1,12 +1,8 @@
+@charset "UTF-8";
+/*css 初始化 */
 * {
     padding:0;
     margin: 0;
-}
-
-body {
-    color: #999;
-    font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
-    background-color: #f0f3ef;
 }
 
 a, button {
@@ -14,25 +10,53 @@ a, button {
     text-decoration: none;
 }
 
+a:hover {
+    color: red;
+}
+
 li {
     list-style: none;
 }
 
+body {
+    color: #999;
+    font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,"\\5b8b\4f53",sans-serif;
+    background-color: #f0f3ef;
+}
+
+#root>div {
+    position: relative;
+}
+
+/*公共类*/
 .w {
     margin: auto;
     width: 1190px;
 }
 
-.shortcut {
-    height: 30px;
-    line-height: 30px;
-    background-color: #e3e4e5;;
-}
-
-a:hover {
-    color: red;
-}
-
 .style-red {
     color:red;;
+}
+
+.arrow_down {
+    border:  solid red;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 3px;
+    transform: rotate(45deg);
+}
+
+.clearfix:before, .clearfix:after {
+    /*清除浮动 */
+    content: "";
+    display: table
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
 }

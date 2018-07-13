@@ -12,6 +12,19 @@ Dropdown.prototype = {
         if(insert_map==null || items_name==null)
             throw new Error("insert_map or items_name is null;");
         var ret = "";
+        if (!Object.keys) {
+            Object.keys = function(obj) {
+                var keys = [];
+
+                for (var i in obj) {
+                    if (obj.hasOwnProperty(i)) {
+                        keys.push(i);
+                    }
+                }
+
+                return keys;
+            };
+        };
         var c = Object.keys(insert_map);  /* important */
         for (var i = 0; i < c.length; i++) {
             ret += '<div class='+items_name+'><a>' + c[i] + '</a></div>';
@@ -64,8 +77,8 @@ $(document).ready(function () {
         "Global Site":100, "Сайт России":101, "Situs Indonesia":102, "Sitio de España":103
     };
     var J_user = {
-        "待处理订单":0, "消息":1, "返修退换货":2, "我的回答":3, "降价商品":4, "我的关注":5,
-    }
+        "待处理订单":0, "消息":1, "返修退换货":2, "我的回答":3, "降价商品":4, "我的关注":5
+    };
     var shortcut_company = {"企业购":0,"商用场景馆":1,"工业品":2,"礼品卡":3};
 
     var tmp = new Dropdown(".location");

@@ -19,6 +19,13 @@ function skipPoll(slider, key){
     var str = poll($(slider[0]).length, key);
     var length = str.length;
     var i;
+    if (!Array.prototype.forEach) {
+        Array.prototype.forEach = function(fn, scope) {
+            for(var i = 0, len = this.length; i < len; ++i) {
+                fn.call(scope, this[i], i, this);
+            }
+        }
+    }
     for(i=0; i<length; i++){
         slider.forEach(
             function (x){$($(x)[i]).attr("class",str[i]);}

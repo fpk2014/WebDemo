@@ -1,27 +1,21 @@
+.shortcut{
+    height: 30px;  /* 不会被继承 */
+    line-height: 30px;  /*import 文本垂直居中 */
+    background-color: #e3e4e5;;   /* 不会被继承 */
+    border-bottom: 1px solid #ddd;
+}
+
 .location {
     float:left;
+    margin-left: 100px;  /* 不会被继承 */
 }
 
-div.location {
-    float:left;
-    margin-left: 100px;
-}
-
-.s_profile  {
+.s_profile {
     float:right;
 }
 
-.s_profile div {
+.s_profile div{
     float:left;
     padding-left: 7px;
     padding-right: 7px;
-}
-
-i.arrow_down {
-    border:  solid red;
-    border-width: 0 1px 1px 0;
-    display: inline-block;
-    padding: 3px;
-    margin-bottom: 3px;
-    transform: rotate(45deg);
 }
