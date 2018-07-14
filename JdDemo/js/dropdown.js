@@ -15,21 +15,23 @@ Dropdown.prototype = {
         if (!Object.keys) {
             Object.keys = function(obj) {
                 var keys = [];
-
                 for (var i in obj) {
                     if (obj.hasOwnProperty(i)) {
                         keys.push(i);
                     }
                 }
-
                 return keys;
             };
         };
-        var c = Object.keys(insert_map);  /* important */
-        for (var i = 0; i < c.length; i++) {
+        var c, i;
+        insert_map instanceof Array === true ? c=insert_map : c=Object.keys(insert_map);/* important */
+        ret += '<div class="'+items_name+'_blcck">';
+        for (i = 0; i < c.length; i++) {
             ret += '<div class='+items_name+'><a>' + c[i] + '</a></div>';
         }
-        //console.log(text);
+        ret += '<div class="clearfix"></div>';
+        ret += "</div>";
+        //console.log(ret);
         return ret;
     },
     append: function(insert_text){
@@ -76,17 +78,28 @@ $(document).ready(function () {
     var global_cities = {
         "Global Site":100, "Сайт России":101, "Situs Indonesia":102, "Sitio de España":103
     };
-    var J_user = {
+    var J_user_1 = {
         "待处理订单":0, "消息":1, "返修退换货":2, "我的回答":3, "降价商品":4, "我的关注":5
     };
-    var shortcut_company = {"企业购":0,"商用场景馆":1,"工业品":2,"礼品卡":3};
+    var J_user_2 = {
+        "待处理订单":0, "消息":1, "返修退换货":2, "我的回答":3, "降价商品":4, "我的关注":5
+    };
+    var shortcut_company = {"我的京豆":6,"我的优惠券":7,"我的白条":8,"我的理财":9};
 
+    var J_service_1 = {"帮助中心":0, "售后服务":1, "在线客服":2, "意见建议":3, "电话客服":4, "客服邮箱":5, "金融咨询":6 , "全球售客服":7};
+    var J_service_2 = {"合作招商":8, "学习中心":9, "商家后台":10, "京麦工作台":11, "商家帮助":12, "规划平台":13 };
     var tmp = new Dropdown(".location");
-    var tmp_text = tmp.text(province, 'item')+"<hr>"+tmp.text(global_cities, 'global_cities_items');
+    var tmp_text = tmp.text(province, 'item')+ "<hr/>"+ tmp.text(global_cities, 'global_cities_items');
     tmp.append(tmp_text);
-    //new Dropdown(".location").start(province, 'item');
-    // tmp=new Dropdown(".location");tmp.append(tmp.text(province, 'item'));
+
+    tmp = new Dropdown(".J_user");
+    tmp_text = tmp.text(J_user_1, 'user_item')+'<hr/>'+tmp.text(J_user_2, 'user_item');
+    tmp.append(tmp_text);
 
     new Dropdown(".shortcut_company").start(shortcut_company, 'item');
-    new Dropdown(".J_user").start(J_user, 'user_item');
+
+    tmp = new Dropdown(".J_service");
+    tmp_text = '<div>客户</div>'+tmp.text(J_service_1, 'user_item')+'<div>商户</div>'+tmp.text(J_service_2, 'user_item');
+    tmp.append(tmp_text);
+
 });

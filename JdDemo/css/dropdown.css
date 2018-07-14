@@ -14,8 +14,11 @@
     background-color: white;
 }
 
+.dropdown>div {
+    float: right;
+}
 
-.dropdown_title div{
+.dropdown_title>div{
     display: inline-block;
     padding-left: 7px;
     padding-right: 7px;
@@ -25,32 +28,53 @@
     top: 30px;
 }
 
-
 .location.dropdown_content {
     width: 300px;
     padding: 10px;
 }
 
 .J_user.dropdown_content {
-    width: 180px;
+    width: 280px;
+    padding: 10px;
+}
+
+.shortcut_company.dropdown_content{
+    width: 140px;
+    padding: 10px;
 }
 
 .shortcut_company.dropdown_content {
     width: 150px;
 }
 
-.item {
-    float: left;
-    width: 60px;
-    padding: 2px 0;
-}
+    .item {
+        float: left;
+        width: 60px;
+        padding: 2px 0;
+    }
 
-.global_cities_items {
-    float:left;
-    width: 150px;
-}
+    .global_cities_items {
+        float:left;
+        width: 150px;
+    }
 
-.user_item{
-    float:left;
-    width: 70px;
-}
+    .user_item{
+        float:left;
+        width: 140px;
+    }
+
+    div.user_item {
+        padding-right: 0;
+    }
+
+    .J_service.dropdown_content{
+        padding: 20px;
+    }
+
+    .J_service.dropdown_content>div{
+        width: 160px;
+    }
+
+    .user_item_blcck div{
+        width: 80px;
+    }

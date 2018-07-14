@@ -53,6 +53,10 @@
         height: 27px;
         line-height: 27px;
     }
+
+    .cate_menu_item a{
+        font-size:14px;
+    }
     /*fs_col1 结束*/
 
     /*fs_col2 开始*/

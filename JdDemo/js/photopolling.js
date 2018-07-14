@@ -45,7 +45,7 @@ function leftPoll(slider) {
 }
 
 
-(function() {
+$(document).ready(function () {
     var sliders = {".focus_list":[".focus_list .slider_list li", ".focus_list .slider_indicator i"],
         ".sk_chn_list":[".sk_chn_list .slider_list li", ".sk_chn_list .slider_indicator i"]
     };
@@ -53,9 +53,7 @@ function leftPoll(slider) {
         //console.log(sliders[i]);
         initialSlider(sliders[i]);
         (function(i) {
-            $(document).ready(function () {
-                setInterval(function(){rightPoll(sliders[i]);},3000);
-            });
+            setInterval(function(){rightPoll(sliders[i]);},3000);
 
             $(i+" .slider_control_prev").click(function () {
                 leftPoll(sliders[i]);
@@ -71,4 +69,4 @@ function leftPoll(slider) {
             });
         })(i);
     }
-})();
+});
