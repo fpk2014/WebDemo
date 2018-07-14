@@ -1,0 +1,18 @@
+.popover_content {
+    display: none;
+    position: absolute;
+    width: 100px;
+    margin-top:30px;
+}
+
+.popover_content img{
+    width:100%;
+    height:100%;
+    background-image:url(../img/qrcode.png);
+    background-size: cover; /*important*/
+}
+
+.popover_content .qrocde {
+    width: 94px;
+    height: 94px;
+}
