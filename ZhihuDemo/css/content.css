@@ -1,26 +1,9 @@
+@charset "UTF-8";
 div.m_content {
     display: flex;  /* important */
     align-items: flex-start;
     width: 1000px;
     margin: 10px auto;
-}
-
-.m_content_items {
-    display: block;
-}
-
-.Card {
-    display: flex;
-    width: 694px;
-    margin-top: 0;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    background-color: white;
-}
-
-.HomeMainItem {
-    display: block;
-    background-color: #ffffff;
 }
 
 div.m_content_side {
@@ -32,22 +15,76 @@ div.m_content_side img {
     max-width: 100%;
 }
 
-.top_card_nav, .top_card_right{
-    line-height: 58px;
-    padding: 0 20px;
-
+/*m_content 开始*/
+.m_content_items {
+    display: block;
 }
+/*m_content 结束*/
 
-.top_card_nav div {
-    display: inline-block;
-}
+    /*m_content m_content_items开始*/
+    .card {
+        position:relative;
+        display: flex;
+        width: 694px;
+        margin-top: 0;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        background-color: white;
+    }
 
-.top_card_nav div a{
-    margin-left: 40px;
-}
+    .top_story_main {
+        display: block;
+        background-color: #ffffff;
+    }
 
-.top_card_right {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-}
+    .top_card_nav, .top_card_right{
+        line-height: 58px;
+        padding: 0 20px;
+
+    }
+
+    .top_card_nav div {
+        display: inline-block;
+    }
+
+    .top_card_nav div a{
+        margin-left: 40px;
+    }
+
+    .top_card_right {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    .top_story_item {
+        padding: 10px;
+    }
+
+    .top_story_item .right_button {
+        position:absolute;
+        right:10px;
+    }
+
+        .feed_source_from {
+            margin-bottom: 8px;
+            color: #8590a6;
+        }
+
+        .feed_source {
+            margin-bottom: 14px;
+        }
+
+        .rich_content {
+            margin-top: 9px;
+            margin-bottom: -4px;
+            overflow: hidden;
+        }
+
+        .share_menu {
+            display: inline-block;
+        }
+
+        .share_menu button{
+            color:red ;
+        }
