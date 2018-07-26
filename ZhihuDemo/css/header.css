@@ -23,9 +23,10 @@ div.h_content_search {
     align-items: center;
     height: 34px;
     width: 326px;
-    border: 1px solid red;
+    border: 1px solid #f6f6f6;
     border-radius: 3px;
     box-sizing: border-box;
+    margin-left: 15px;
     background: #f6f6f6;
 }
 
@@ -43,6 +44,19 @@ div.h_content_search {
     background-color: white;
     border-color: #78baff;
     transition:width 1s;
+}
+.h_content_question {
+    color: #fff;
+    background-color: #0084ff;
+    font-size: 14px;
+    padding: 0 14px;
+    margin-left: 16px;
+    line-height: 30px;
+    border: 1px solid #0084ff;
+    border-radius: 3px;
+}
+.h_content_search:hover~.h_content_question{
+    display: none;
 }
 
 button.Icon--search,
@@ -63,6 +77,10 @@ button.Icon--profile img {
     font-size: 20px;
 }
 
+button.Icon--message,button.Icon--remind  {
+    margin-right: 40px;
+    background: transparent;
+}
 
 div.h_content_person {
     display: flex;

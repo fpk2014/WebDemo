@@ -23,7 +23,7 @@ img.m_image_logo {
 }
 
 input.m_form_input {
-    width: 30%;
+    width: 480px;
     min-width: 14em;
     padding:0;
     font-size: 1.5em;
@@ -32,12 +32,13 @@ input.m_form_input {
 }
 
 input.m_form_submit {
+    color: white;
     box-sizing: content-box;-moz-box-sizing: content-box;-webkit-box-sizing: content-box; /* important */
-    width: 8em;
+    width: 6em;
     padding:0;
     font-size: 1.5em;
-    background: #ffe699;
-    border: 1px solid #ffe699;
+    background: #398bfb;
+    border: 1px solid #398bfb;
     cursor:pointer;
 }
 

@@ -13,20 +13,30 @@
 <div id="root">
     <header>
         <div class="h_content">
-            <a>LOGO</a>
+            <a href="//www.zhihu.com" aria-label="知乎">
+                <img src="img/logo.svg" alt="search">
+            </a>
             <nav>
-                <a>首页</a>
+                <a style="color: #444;">首页</a>
+                <a>发现</a>
                 <a>话题</a>
             </nav>
-            <div>
+            <div style="display: flex;">
                 <div class="h_content_search">
-                    <input type="text" placeholder="搜索">
+                    <input type="text" placeholder="吴亦凡的 skr 用法正确吗" >
                     <button class="Icon Icon--search">
                         <img src="img/search_icon.svg" alt="search">
                     </button>
                 </div>
+                <button type="button" class="h_content_question">提问</button>
             </div>
             <div class="h_content_person">
+                <button class="Icon Icon--remind">
+                    <img src="img/remind.svg" alt="remind">
+                </button>
+                <button class="Icon Icon--message">
+                    <img src="img/message.svg" alt="message">
+                </button>
                 <button class="Icon Icon--profile">
                     <img src="img/profile_icon.svg" alt="profile">
                 </button>
@@ -36,175 +46,377 @@
     <main>
         <div class="m_content">
             <div class="m_content_items">
-                <div class="card">
+                <div class="card top">
                     <div class="top_card_nav">
-                        <a>提问</a>
+                        <div style="margin-left: 0px !important;">
+                            <img src="img/content_question.svg">
+                            <a>提问</a>
+                        </div>
                         <div>
+                            <img src="img/content_answer.svg">
                             <a>回答</a>
+                        </div>
+                        <div>
+                            <img src="img/content_write.svg">
                             <a>写文章</a>
                         </div>
+                        <div>
+                            <img src="img/content_think.svg">
+                            <a>写想法</a>
+                        </div>
                     </div>
-                    <a class="top_card_right">
+                    <a class="top_card_right" style="color: #8590a6;">
                         草稿
                     </a>
                 </div>
                 <div class="card top_story_main">
                     <div class="top_story_item">
-                        <button class="right_button">不感兴趣</button>
+                        <a class="right_button">
+                            <img src="img/close.svg">
+                        </a>
                         <div class="feed">
                             <div class="feed_source">
                                 <div class="feed_source_from">
                                     热门内容, 来自:
-                                    <span><a>前端</a></span>
+                                    <span><a>儒家</a></span>
                                 </div>
                                 <div class="author_info">
-                                    作者
+                                    <img class="author_info_avatar" width="24" height="24" src="https://pic2.zhimg.com/50/v2-633f654d90d4584ed050864addee1fd0_s.jpg" alt="Java3y">
+                                    大道齐元, 道家哲学砖家
                                 </div>
                             </div>
                             <div class="answer_item">
-                                <h2>Hello World</h2>
-                                <div class="rich_content">
-                                    <div>
-                                        <span class="rich_content text">在目光最短浅的时候，做了决定一生的事情。
-                                            在一个地方呆七年，忽然发现新世界… 1、我靠：小郭这小子，全班倒数，
-                                            天天包宿，现在是不是猝死在网吧了？什么？三…
+                                <h2>孔子知道那么多道理，为什么有人觉得他没过好一生？</h2>
+                                <div>
+                                    <div class="rich_content">
+                                        <span class="rich_content text">孔子有一个学生，叫子贡。子贡这个人，不仅辩才无碍，办事通达，而且善于经商，富可敌国。在当时，子贡的名声、地位跟孔子不相上下。甚至有人认为，子贡超过了…
                                         </span>
-                                        <button type="button">阅读全文</button>
+                                        <button type="button" class="button_plain">阅读全文
+                                            <img src="img/down_arrow.svg" style="margin-left:8px;vertical-align: text-bottom;">
+                                        </button>
                                     </div>
                                     <div class="content_items_actions">
-                                        <button aria-label="赞同" type="button">赞同 696</button>
-                                        <button aria-label="反对" type="button"></button>
-                                        <button type="button">82 条评论</button>
+                                        <button aria-label="赞同" type="button" class="vote_button">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="10" height="10"><path d="M2 18.242c0-.326.088-.532.237-.896l7.98-13.203C10.572 3.57 11.086 3 12 3c.915 0 1.429.571 1.784 1.143l7.98 13.203c.15.364.236.57.236.896 0 1.386-.875 1.9-1.955 1.9H3.955c-1.08 0-1.955-.517-1.955-1.9z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            赞同 696
+                                        </button>
+                                        <button aria-label="反对" class="vote_button" type="button">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="10" height="10"><path d="M20.044 3H3.956C2.876 3 2 3.517 2 4.9c0 .326.087.533.236.896L10.216 19c.355.571.87 1.143 1.784 1.143s1.429-.572 1.784-1.143l7.98-13.204c.149-.363.236-.57.236-.896 0-1.386-.876-1.9-1.956-1.9z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                        </button>
+                                        <button type="button"  class="button_plain">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M10.241 19.313a.97.97 0 0 0-.77.2 7.908 7.908 0 0 1-3.772 1.482.409.409 0 0 1-.38-.637 5.825 5.825 0 0 0 1.11-2.237.605.605 0 0 0-.227-.59A7.935 7.935 0 0 1 3 11.25C3 6.7 7.03 3 12 3s9 3.7 9 8.25-4.373 9.108-10.759 8.063z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            82 条评论
+                                        </button>
                                         <div class="popover share_menu">
                                             <div class="popover4_toggle">
-                                                <button type="button">分享</button>
+                                                <button type="button"  class="button_plain">
+                                                    <span style="display: inline-flex; align-items: center;">&#8203;
+                                                        <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M2.931 7.89c-1.067.24-1.275 1.669-.318 2.207l5.277 2.908 8.168-4.776c.25-.127.477.198.273.39L9.05 14.66l.927 5.953c.18 1.084 1.593 1.376 2.182.456l9.644-15.242c.584-.892-.212-2.029-1.234-1.796L2.93 7.89z" fill-rule="evenodd"></path></svg>
+                                                    </span>
+                                                    分享
+                                                </button>
                                             </div>
                                         </div>
-                                        <button type="button">收藏</button>
-                                        <button type="button">感谢</button>
+                                        <button type="button"  class="button_plain">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M5.515 19.64l.918-5.355-3.89-3.792c-.926-.902-.639-1.784.64-1.97L8.56 7.74l2.404-4.871c.572-1.16 1.5-1.16 2.072 0L15.44 7.74l5.377.782c1.28.186 1.566 1.068.64 1.97l-3.89 3.793.918 5.354c.219 1.274-.532 1.82-1.676 1.218L12 18.33l-4.808 2.528c-1.145.602-1.896.056-1.677-1.218z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            收藏
+                                        </button>
+                                        <button type="button"  class="button_plain">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M2 8.437C2 5.505 4.294 3.094 7.207 3 9.243 3 11.092 4.19 12 6c.823-1.758 2.649-3 4.651-3C19.545 3 22 5.507 22 8.432 22 16.24 13.842 21 12 21 10.158 21 2 16.24 2 8.437z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            感谢
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="top_story_item">
-                        <button class="right_button">不感兴趣</button>
+                        <a class="right_button">
+                            <img src="img/close.svg">
+                        </a>
                         <div class="feed">
                             <div class="feed_source">
                                 <div class="feed_source_from">
                                     热门内容, 来自:
-                                    <span><a>前端</a></span>
+                                    <span><a>科比</a></span>
                                 </div>
                                 <div class="author_info">
-                                    作者
+                                    <img class="author_info_avatar" width="24" height="24" src="https://pic4.zhimg.com/aadd7b895_s.jpg" alt="Java3y">
+                                    匿名用户
                                 </div>
                             </div>
                             <div class="answer_item">
-                                <h2>有哪些中国地理冷知识？</h2>
-                                <div class="rich_content">
-                                    <div>
+                                <h2>如何评价科比指出骑士失冠原因？</h2>
+                                <div>
+                                    <div class="rich_content">
                                         <span class="rich_content text">
-                                            新疆作为中国最干旱的省区，最头疼的自然灾害是洪水。
-                                            根据1760年以来的清王朝的方志研究，自1760年清王朝收
-                                            复新疆之后新疆发生旱灾的年份只有42年，发生洪灾的年份
-                                            居然有59年，超过平均两年半就有一年是洪灾年份。
-                                            建国之后，新疆洪灾也没有减少的趋势，19…
+                                            科比说话已经很客气了。 实际上，詹姆斯的打法看起来无私得很，其实是最自私的。 实际上，勒布朗詹姆斯这个球员，从场上到场下所做的一切，都是为了获得数据、荣…
                                         </span>
-                                        <button type="button">阅读全文</button>
+                                        <button type="button" class="button_plain">阅读全文
+                                            <img src="img/down_arrow.svg" style="margin-left:8px;vertical-align: text-bottom;">
+                                        </button>
                                     </div>
                                     <div class="content_items_actions">
-                                        <button aria-label="赞同" type="button">赞同 696</button>
-                                        <button aria-label="反对" type="button"></button>
-                                        <button type="button">82 条评论</button>
+                                        <button aria-label="赞同" type="button" class="vote_button">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="10" height="10"><path d="M2 18.242c0-.326.088-.532.237-.896l7.98-13.203C10.572 3.57 11.086 3 12 3c.915 0 1.429.571 1.784 1.143l7.98 13.203c.15.364.236.57.236.896 0 1.386-.875 1.9-1.955 1.9H3.955c-1.08 0-1.955-.517-1.955-1.9z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            赞同 3.3K
+                                        </button>
+                                        <button aria-label="反对" class="vote_button" type="button">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="10" height="10"><path d="M20.044 3H3.956C2.876 3 2 3.517 2 4.9c0 .326.087.533.236.896L10.216 19c.355.571.87 1.143 1.784 1.143s1.429-.572 1.784-1.143l7.98-13.204c.149-.363.236-.57.236-.896 0-1.386-.876-1.9-1.956-1.9z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                        </button>
+                                        <button type="button"  class="button_plain">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M10.241 19.313a.97.97 0 0 0-.77.2 7.908 7.908 0 0 1-3.772 1.482.409.409 0 0 1-.38-.637 5.825 5.825 0 0 0 1.11-2.237.605.605 0 0 0-.227-.59A7.935 7.935 0 0 1 3 11.25C3 6.7 7.03 3 12 3s9 3.7 9 8.25-4.373 9.108-10.759 8.063z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            100 条评论
+                                        </button>
                                         <div class="popover share_menu">
                                             <div class="popover4_toggle">
-                                                <button type="button">分享</button>
+                                                <button type="button"  class="button_plain">
+                                                    <span style="display: inline-flex; align-items: center;">&#8203;
+                                                        <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M2.931 7.89c-1.067.24-1.275 1.669-.318 2.207l5.277 2.908 8.168-4.776c.25-.127.477.198.273.39L9.05 14.66l.927 5.953c.18 1.084 1.593 1.376 2.182.456l9.644-15.242c.584-.892-.212-2.029-1.234-1.796L2.93 7.89z" fill-rule="evenodd"></path></svg>
+                                                    </span>
+                                                    分享
+                                                </button>
                                             </div>
                                         </div>
-                                        <button type="button">收藏</button>
-                                        <button type="button">感谢</button>
+                                        <button type="button"  class="button_plain">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M5.515 19.64l.918-5.355-3.89-3.792c-.926-.902-.639-1.784.64-1.97L8.56 7.74l2.404-4.871c.572-1.16 1.5-1.16 2.072 0L15.44 7.74l5.377.782c1.28.186 1.566 1.068.64 1.97l-3.89 3.793.918 5.354c.219 1.274-.532 1.82-1.676 1.218L12 18.33l-4.808 2.528c-1.145.602-1.896.056-1.677-1.218z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            收藏
+                                        </button>
+                                        <button type="button"  class="button_plain">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M2 8.437C2 5.505 4.294 3.094 7.207 3 9.243 3 11.092 4.19 12 6c.823-1.758 2.649-3 4.651-3C19.545 3 22 5.507 22 8.432 22 16.24 13.842 21 12 21 10.158 21 2 16.24 2 8.437z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            感谢
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="top_story_item">
-                        <button class="right_button">不感兴趣</button>
+                        <a class="right_button">
+                            <img src="img/close.svg">
+                        </a>
                         <div class="feed">
                             <div class="feed_source">
                                 <div class="feed_source_from">
                                     热门内容, 来自:
-                                    <span><a>前端</a></span>
+                                    <span><a>周杰伦</a></span>
                                 </div>
                                 <div class="author_info">
-                                    作者
+                                    <img class="author_info_avatar" width="24" height="24" src="https://pic3.zhimg.com/50/v2-893ca1a7d9429573ed61e48d0bf6ed88_s.jpg" alt="Java3y">
+                                    小庆, 学生
                                 </div>
                             </div>
                             <div class="answer_item">
-                                <h2>有哪些中国地理冷知识？</h2>
-                                <div class="rich_content">
-                                    <div>
+                                <h2>如果某天周杰伦与林俊杰组合，会发生什么样的事情？</h2>
+                                <div>
+                                    <div class="rich_content">
                                         <span class="rich_content text">
-                                            新疆作为中国最干旱的省区，最头疼的自然灾害是洪水。
-                                            根据1760年以来的清王朝的方志研究，自1760年清王朝收
-                                            复新疆之后新疆发生旱灾的年份只有42年，发生洪灾的年份
-                                            居然有59年，超过平均两年半就有一年是洪灾年份。
-                                            建国之后，新疆洪灾也没有减少的趋势，19…
-                                        </span>
-                                        <button type="button">阅读全文</button>
+                                            如果真有那么一天，咳咳，那么问题来了......这个组合叫什么名字呢？ JAY（喝了一口手中的奶茶）: 那还不简单，你和我的名字之中各取一个字不就行了…</span>
+                                        <button type="button" class="button_plain">阅读全文
+                                            <img src="img/down_arrow.svg" style="margin-left:8px;vertical-align: text-bottom;">
+                                        </button>
                                     </div>
                                     <div class="content_items_actions">
-                                        <button aria-label="赞同" type="button">赞同 696</button>
-                                        <button aria-label="反对" type="button"></button>
-                                        <button type="button">82 条评论</button>
+                                        <button aria-label="赞同" type="button" class="vote_button">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="10" height="10"><path d="M2 18.242c0-.326.088-.532.237-.896l7.98-13.203C10.572 3.57 11.086 3 12 3c.915 0 1.429.571 1.784 1.143l7.98 13.203c.15.364.236.57.236.896 0 1.386-.875 1.9-1.955 1.9H3.955c-1.08 0-1.955-.517-1.955-1.9z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            赞同 696
+                                        </button>
+                                        <button aria-label="反对" class="vote_button" type="button">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="10" height="10"><path d="M20.044 3H3.956C2.876 3 2 3.517 2 4.9c0 .326.087.533.236.896L10.216 19c.355.571.87 1.143 1.784 1.143s1.429-.572 1.784-1.143l7.98-13.204c.149-.363.236-.57.236-.896 0-1.386-.876-1.9-1.956-1.9z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                        </button>
+                                        <button type="button"  class="button_plain">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M10.241 19.313a.97.97 0 0 0-.77.2 7.908 7.908 0 0 1-3.772 1.482.409.409 0 0 1-.38-.637 5.825 5.825 0 0 0 1.11-2.237.605.605 0 0 0-.227-.59A7.935 7.935 0 0 1 3 11.25C3 6.7 7.03 3 12 3s9 3.7 9 8.25-4.373 9.108-10.759 8.063z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            82 条评论
+                                        </button>
                                         <div class="popover share_menu">
                                             <div class="popover4_toggle">
-                                                <button type="button">分享</button>
+                                                <button type="button"  class="button_plain">
+                                                    <span style="display: inline-flex; align-items: center;">&#8203;
+                                                        <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M2.931 7.89c-1.067.24-1.275 1.669-.318 2.207l5.277 2.908 8.168-4.776c.25-.127.477.198.273.39L9.05 14.66l.927 5.953c.18 1.084 1.593 1.376 2.182.456l9.644-15.242c.584-.892-.212-2.029-1.234-1.796L2.93 7.89z" fill-rule="evenodd"></path></svg>
+                                                    </span>
+                                                    分享
+                                                </button>
                                             </div>
                                         </div>
-                                        <button type="button">收藏</button>
-                                        <button type="button">感谢</button>
+                                        <button type="button"  class="button_plain">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M5.515 19.64l.918-5.355-3.89-3.792c-.926-.902-.639-1.784.64-1.97L8.56 7.74l2.404-4.871c.572-1.16 1.5-1.16 2.072 0L15.44 7.74l5.377.782c1.28.186 1.566 1.068.64 1.97l-3.89 3.793.918 5.354c.219 1.274-.532 1.82-1.676 1.218L12 18.33l-4.808 2.528c-1.145.602-1.896.056-1.677-1.218z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            收藏
+                                        </button>
+                                        <button type="button"  class="button_plain">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M2 8.437C2 5.505 4.294 3.094 7.207 3 9.243 3 11.092 4.19 12 6c.823-1.758 2.649-3 4.651-3C19.545 3 22 5.507 22 8.432 22 16.24 13.842 21 12 21 10.158 21 2 16.24 2 8.437z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            感谢
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="top_story_item">
-                        <button class="right_button">不感兴趣</button>
+                        <a class="right_button">
+                            <img src="img/close.svg">
+                        </a>
                         <div class="feed">
                             <div class="feed_source">
                                 <div class="feed_source_from">
                                     热门内容, 来自:
-                                    <span><a>前端</a></span>
+                                    <span><a>Ubuntu</a></span>
                                 </div>
                                 <div class="author_info">
-                                    作者
+                                    <img class="author_info_avatar" width="24" height="24" src="https://pic2.zhimg.com/50/310d85e8d_s.jpg" alt="Java3y">
+                                    pansz
                                 </div>
                             </div>
                             <div class="answer_item">
-                                <h2>有哪些中国地理冷知识？</h2>
-                                <div class="rich_content">
-                                    <div>
+                                <h2>用Ubuntu做日常开发电脑的系统是一种怎样的体验？</h2>
+                                <div>
+                                    <div class="rich_content">
                                         <span class="rich_content text">
-                                            新疆作为中国最干旱的省区，最头疼的自然灾害是洪水。
-                                            根据1760年以来的清王朝的方志研究，自1760年清王朝收
-                                            复新疆之后新疆发生旱灾的年份只有42年，发生洪灾的年份
-                                            居然有59年，超过平均两年半就有一年是洪灾年份。
-                                            建国之后，新疆洪灾也没有减少的趋势，19…
+                                            只要公司支持，一切问题其实都不是问题。所以你要说最大的坑，那就是：确认部门主管是否支持你这么做？ 我们部门是支持大家日常用 Ubuntu 工作的，所以…
                                         </span>
-                                        <button type="button">阅读全文</button>
+                                        <button type="button" class="button_plain">阅读全文
+                                            <img src="img/down_arrow.svg" style="margin-left:8px;vertical-align: text-bottom;">
+                                        </button>
                                     </div>
                                     <div class="content_items_actions">
-                                        <button aria-label="赞同" type="button">赞同 696</button>
-                                        <button aria-label="反对" type="button"></button>
-                                        <button type="button">82 条评论</button>
+                                        <button aria-label="赞同" type="button" class="vote_button">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="10" height="10"><path d="M2 18.242c0-.326.088-.532.237-.896l7.98-13.203C10.572 3.57 11.086 3 12 3c.915 0 1.429.571 1.784 1.143l7.98 13.203c.15.364.236.57.236.896 0 1.386-.875 1.9-1.955 1.9H3.955c-1.08 0-1.955-.517-1.955-1.9z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            赞同 200
+                                        </button>
+                                        <button aria-label="反对" class="vote_button" type="button">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="10" height="10"><path d="M20.044 3H3.956C2.876 3 2 3.517 2 4.9c0 .326.087.533.236.896L10.216 19c.355.571.87 1.143 1.784 1.143s1.429-.572 1.784-1.143l7.98-13.204c.149-.363.236-.57.236-.896 0-1.386-.876-1.9-1.956-1.9z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                        </button>
+                                        <button type="button"  class="button_plain">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M10.241 19.313a.97.97 0 0 0-.77.2 7.908 7.908 0 0 1-3.772 1.482.409.409 0 0 1-.38-.637 5.825 5.825 0 0 0 1.11-2.237.605.605 0 0 0-.227-.59A7.935 7.935 0 0 1 3 11.25C3 6.7 7.03 3 12 3s9 3.7 9 8.25-4.373 9.108-10.759 8.063z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            82 条评论
+                                        </button>
                                         <div class="popover share_menu">
                                             <div class="popover4_toggle">
-                                                <button type="button">分享</button>
+                                                <button type="button"  class="button_plain">
+                                                    <span style="display: inline-flex; align-items: center;">&#8203;
+                                                        <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M2.931 7.89c-1.067.24-1.275 1.669-.318 2.207l5.277 2.908 8.168-4.776c.25-.127.477.198.273.39L9.05 14.66l.927 5.953c.18 1.084 1.593 1.376 2.182.456l9.644-15.242c.584-.892-.212-2.029-1.234-1.796L2.93 7.89z" fill-rule="evenodd"></path></svg>
+                                                    </span>
+                                                    分享
+                                                </button>
                                             </div>
                                         </div>
-                                        <button type="button">收藏</button>
-                                        <button type="button">感谢</button>
+                                        <button type="button"  class="button_plain">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M5.515 19.64l.918-5.355-3.89-3.792c-.926-.902-.639-1.784.64-1.97L8.56 7.74l2.404-4.871c.572-1.16 1.5-1.16 2.072 0L15.44 7.74l5.377.782c1.28.186 1.566 1.068.64 1.97l-3.89 3.793.918 5.354c.219 1.274-.532 1.82-1.676 1.218L12 18.33l-4.808 2.528c-1.145.602-1.896.056-1.677-1.218z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            收藏
+                                        </button>
+                                        <button type="button"  class="button_plain">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M2 8.437C2 5.505 4.294 3.094 7.207 3 9.243 3 11.092 4.19 12 6c.823-1.758 2.649-3 4.651-3C19.545 3 22 5.507 22 8.432 22 16.24 13.842 21 12 21 10.158 21 2 16.24 2 8.437z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            感谢
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top_story_item">
+                        <a class="right_button">
+                            <img src="img/close.svg">
+                        </a>
+                        <div class="feed">
+                            <div class="feed_source">
+                                <div class="feed_source_from">
+                                    热门内容, 来自:
+                                    <span><a>房价</a></span>
+                                </div>
+                                <div class="author_info">
+                                    <img class="author_info_avatar" width="24" height="24" src="https://pic1.zhimg.com/50/v2-9eb627d6282df66ff5fc92e6118755db_s.jpg" alt="Java3y">
+                                    金先生
+                                </div>
+                            </div>
+                            <div class="answer_item">
+                                <h2>房价崩盘后会发生什么？</h2>
+                                <div>
+                                    <div class="rich_content">
+                                        <span class="rich_content text">
+                                             我印象里崩盘的城市，温州绝对算一个。曾几何时，温州炒房团天下闻名，凭借组团而成的强大资金实力，把苏杭沪京琼等等地区的房子炒上了天，当然，顺便也炒…</span>
+                                        <button type="button" class="button_plain">阅读全文
+                                            <img src="img/down_arrow.svg" style="margin-left:8px;vertical-align: text-bottom;">
+                                        </button>
+                                    </div>
+                                    <div class="content_items_actions">
+                                        <button aria-label="赞同" type="button" class="vote_button">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="10" height="10"><path d="M2 18.242c0-.326.088-.532.237-.896l7.98-13.203C10.572 3.57 11.086 3 12 3c.915 0 1.429.571 1.784 1.143l7.98 13.203c.15.364.236.57.236.896 0 1.386-.875 1.9-1.955 1.9H3.955c-1.08 0-1.955-.517-1.955-1.9z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            赞同 21
+                                        </button>
+                                        <button aria-label="反对" class="vote_button" type="button">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="10" height="10"><path d="M20.044 3H3.956C2.876 3 2 3.517 2 4.9c0 .326.087.533.236.896L10.216 19c.355.571.87 1.143 1.784 1.143s1.429-.572 1.784-1.143l7.98-13.204c.149-.363.236-.57.236-.896 0-1.386-.876-1.9-1.956-1.9z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                        </button>
+                                        <button type="button"  class="button_plain">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M10.241 19.313a.97.97 0 0 0-.77.2 7.908 7.908 0 0 1-3.772 1.482.409.409 0 0 1-.38-.637 5.825 5.825 0 0 0 1.11-2.237.605.605 0 0 0-.227-.59A7.935 7.935 0 0 1 3 11.25C3 6.7 7.03 3 12 3s9 3.7 9 8.25-4.373 9.108-10.759 8.063z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            82 条评论
+                                        </button>
+                                        <div class="popover share_menu">
+                                            <div class="popover4_toggle">
+                                                <button type="button"  class="button_plain">
+                                                    <span style="display: inline-flex; align-items: center;">&#8203;
+                                                        <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M2.931 7.89c-1.067.24-1.275 1.669-.318 2.207l5.277 2.908 8.168-4.776c.25-.127.477.198.273.39L9.05 14.66l.927 5.953c.18 1.084 1.593 1.376 2.182.456l9.644-15.242c.584-.892-.212-2.029-1.234-1.796L2.93 7.89z" fill-rule="evenodd"></path></svg>
+                                                    </span>
+                                                    分享
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <button type="button"  class="button_plain">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M5.515 19.64l.918-5.355-3.89-3.792c-.926-.902-.639-1.784.64-1.97L8.56 7.74l2.404-4.871c.572-1.16 1.5-1.16 2.072 0L15.44 7.74l5.377.782c1.28.186 1.566 1.068.64 1.97l-3.89 3.793.918 5.354c.219 1.274-.532 1.82-1.676 1.218L12 18.33l-4.808 2.528c-1.145.602-1.896.056-1.677-1.218z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            收藏
+                                        </button>
+                                        <button type="button"  class="button_plain">
+                                            <span style="display: inline-flex; align-items: center;">&#8203;
+                                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M2 8.437C2 5.505 4.294 3.094 7.207 3 9.243 3 11.092 4.19 12 6c.823-1.758 2.649-3 4.651-3C19.545 3 22 5.507 22 8.432 22 16.24 13.842 21 12 21 10.158 21 2 16.24 2 8.437z" fill-rule="evenodd"></path></svg>
+                                            </span>
+                                            感谢
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -215,13 +427,79 @@
 
             <div class="m_content_side">
                 <img src="img/graph.png">
+
+                <div class="to_sidebar">
+                    <ul class="sidebar_category_list">
+                        <li class="GlobalSideBar-categoryItem">
+                            <a class="Button Button--plain" style="color: rgb(255, 207, 0);">
+                                <span class="GlobalSideBar-categoryIcon">
+                                    <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                        <path d="M13.693 10.354l1.634-7.542c.195-.901-.16-1.083-.798-.39l-9.18 9.97c-.638.693-.377 1.254.582 1.254h5.376l-1.634 7.542c-.195.901.16 1.083.798.39l9.18-9.97c.638-.693.377-1.254-.582-1.254h-5.376z"></path>
+                                    </svg>
+                                </span>
+                                <span>Live</span>
+                            </a>
+                        </li>
+                        <li class="GlobalSideBar-categoryItem">
+                            <a style="color: rgb(67, 212, 128);">
+                                <span class="GlobalSideBar-categoryIcon">
+                                    <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                        <path d="M16 17.649V2.931a.921.921 0 0 0-.045-.283.943.943 0 0 0-1.182-.604L4.655 5.235A.932.932 0 0 0 4 6.122v14.947c0 .514.421.931.941.931H19.06c.52 0 .941-.417.941-.93V7.292a.936.936 0 0 0-.941-.931h-.773v12.834a.934.934 0 0 1-.83.924L6.464 21.416c-.02.002 2.94-.958 8.883-2.881a.932.932 0 0 0 .653-.886z" fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span>书店</span>
+                            </a>
+                        </li>
+                        <li class="GlobalSideBar-categoryItem">
+                            <a style="color: rgb(0, 132, 255);">
+                                <span class="GlobalSideBar-categoryIcon">
+                                    <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                        <path d="M10.786 8.41a8.938 8.938 0 0 0-3.968-2.528c-.305-1.719.814-3.337 2.442-3.741 1.221-.405 2.646.101 3.46 1.011 1.045 1.38.915 3.64.814 4.348-.102 1.315-1.221 3.034-1.323 3.135-.305-.809-.814-1.517-1.425-2.225zm-2.442 2.832c-1.526.202-3.052 1.01-4.171 2.123-1.12-.404-1.934-1.314-2.137-2.427-.316-2.427 1.526-3.64 2.849-3.842 1.628-.371 2.849.505 4.07 1.415 1.146 1.012 2.035 2.63 2.035 2.73-.916-.202-1.832-.1-2.646 0zm4.986.303c.509-.607.931-1.586 1.12-2.225.318-1.039.61-3.134.203-4.651 1.323-1.011 3.154-1.011 4.477.303 1.235 1.146 1.017 2.933.814 3.438-.663 1.581-1.933 2.326-3.256 2.832-1.221.404-3.256.303-3.358.303zm-2.645 1.011c-.51.607-.916 1.416-1.221 2.326-.407 1.314-.643 3.06-.102 4.55-1.323 1.011-3.256 1.011-4.477-.202-1.198-1.124-1.018-2.932-.814-3.438.599-1.605 1.933-2.326 3.256-2.831.916-.304 3.256-.405 3.358-.405zm9.259-1.82c1.017.404 1.933 1.315 2.035 2.427.233 2.57-1.526 3.64-2.849 3.842-1.526 0-2.85-.505-4.07-1.415-1.018-.81-2.035-2.528-2.035-2.63.916.203 1.831.102 2.645 0 1.628-.404 3.053-1.112 4.274-2.224zm-6.716 4.854c1.065 1.08 2.442 2.022 4.07 2.528.306 1.719-.814 3.235-2.442 3.741-1.22.405-2.645-.101-3.46-1.011-1.1-1.481-1.017-3.54-.915-4.247.102-1.315 1.221-3.034 1.323-3.135.305.708.721 1.44 1.424 2.124z"></path>
+                                    </svg>
+                                </span>
+                                <span>圆桌</span>
+                            </a>
+                        </li>
+                        <li class="GlobalSideBar-categoryItem">
+                            <a style="color: rgb(15, 136, 235);">
+                            <span class="GlobalSideBar-categoryIcon">
+                                <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M4.076 16.966a4.19 4.19 0 0 1 1.05-1.76l8.568-8.569a.524.524 0 0 1 .741 0l2.928 2.927a.524.524 0 0 1 0 .74l-8.568 8.57c-.49.49-1.096.852-1.761 1.051l-3.528 1.058a.394.394 0 0 1-.49-.488l1.06-3.53zM20.558 4.83c.59.59.59 1.546 0 2.136l-1.693 1.692a.503.503 0 0 1-.712 0l-2.812-2.812a.504.504 0 0 1 0-.712l1.693-1.693a1.51 1.51 0 0 1 2.135 0l1.389 1.389z"></path>
+                                </svg>
+                            </span>
+                            <span>专栏</span>
+                            </a>
+                        </li>
+                        <li class="GlobalSideBar-categoryItem">
+                            <a style="color: rgb(84, 120, 240);">
+                                <span class="GlobalSideBar-categoryIcon">
+                                    <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M11.267 10.188h-2.69a.26.26 0 0 0-.261.26v.508c0 .149.117.26.262.26h2.896v1.54H8.578a.26.26 0 0 0-.262.259v.508c0 .15.117.26.262.26h2.896v2.31c0 .139.119.257.265.257h.522a.258.258 0 0 0 .265-.257v-2.31h2.896a.26.26 0 0 0 .262-.26v-.508a.257.257 0 0 0-.262-.26h-2.896v-1.54h2.896a.26.26 0 0 0 .262-.26v-.507a.257.257 0 0 0-.262-.26h-2.69l2.51-2.636a.26.26 0 0 0-.004-.366l-.423-.413a.253.253 0 0 0-.36.01L12 9.418 9.545 6.784a.248.248 0 0 0-.36-.011l-.423.413a.264.264 0 0 0-.004.366l2.509 2.636zM12 19.973c-1.101 0-2.16-.15-3.152-.43-.532.18-5.27 2.177-4.743 1.179.527-.998 1.58-2.746.806-3.25C3.11 15.936 2 13.822 2 11.486 2 6.8 6.477 3 12 3s10 3.8 10 8.487-4.477 8.486-10 8.486z"></path>
+                                    </svg>
+                                </span>
+                                <span>付费咨询</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </main>
     <div class="popover_content">
         <div>
-            <button type="button">复制链接</button>
-            <button type="button">新浪微博</button>
+            <button type="button"  class="button_plain share_menu_button">
+                <svg fill="#9fadc7" viewBox="0 0 24 24" width="20" height="20"><path d="M6.77 17.23c-.905-.904-.94-2.333-.08-3.193l3.059-3.06-1.192-1.19-3.059 3.058c-1.489 1.489-1.427 3.954.138 5.519s4.03 1.627 5.519.138l3.059-3.059-1.192-1.192-3.059 3.06c-.86.86-2.289.824-3.193-.08zm3.016-8.673l1.192 1.192 3.059-3.06c.86-.86 2.289-.824 3.193.08.905.905.94 2.334.08 3.194l-3.059 3.06 1.192 1.19 3.059-3.058c1.489-1.489 1.427-3.954-.138-5.519s-4.03-1.627-5.519-.138L9.786 8.557zm-1.023 6.68c.33.33.863.343 1.177.029l5.34-5.34c.314-.314.3-.846-.03-1.176-.33-.33-.862-.344-1.176-.03l-5.34 5.34c-.314.314-.3.846.03 1.177z" fill-rule="evenodd"></path></svg>
+                复制链接
+            </button>
+            <button type="button"  class="button_plain share_menu_button">
+                <svg viewBox="0 0 22 18" width="16" height="16" aria-hidden="true" style="fill: rgb(249, 110, 118); height: 16px; width: 16px;"><title></title><g><g fill-rule="evenodd">     <path d="M14.518.06s-.87.644.03 1.71c0 0 6.287-1.19 5.69 6.33 0 0 1.05 1.13 1.674-.31 0 .002 1.44-8.584-7.394-7.73zM4.883 13.17s.038 2.584 3.326 2.584c3.657 0 3.683-2.98 3.683-2.98S12.1 9.67 8.687 9.61c-3.863-.07-3.804 3.56-3.804 3.56zM7.41 14.21c-.668 0-1.214-.447-1.214-.998 0-.55.543-.998 1.215-.998.67 0 1.213.447 1.213.998 0 .55-.54.998-1.212.998z"></path>     <path d="M4.317 4.52C-2.603 10.353.873 14.85.873 14.85c.57 1.01 3.382 3.1 8.596 3.1 5.21 0 9.314-3.628 9.314-6.44 0-2.813-2.918-2.714-2.918-2.714 1.04-1.554.19-2.65.19-2.65-1.684-2.118-5.404-.16-5.407-.158.772-1.717.11-2.797.11-2.797C8.932.66 4.317 4.52 4.317 4.52zm10.448 7.79s-.467 4.16-6.447 4.16c-5.745 0-5.82-3.322-5.842-3.712 0 0-.073-4.423 6.58-4.654 5.94-.204 5.71 4.207 5.71 4.207zM18.65 7.045s1.018-4.37-3.864-3.818c0 0-.628.58.09 1.346 0 0 2.602-.58 2.397 2.598 0 0 .715.885 1.376-.125z"></path>   </g></g></svg>
+                新浪微博
+            </button>
+            <button type="button"  class="button_plain share_menu_button">
+                <svg viewBox="0 0 20 19" width="14" height="14" aria-hidden="true" style="fill: rgb(125, 210, 57); height: 14px; width: 14px;"><title></title><g><path fill-rule="evenodd" d="M.224 18.667s4.24-1.825 4.788-2.056C13.03 20.14 20 14.715 20 8.9 20 3.984 15.523 0 10 0S0 3.984 0 8.898c0 1.86.64 3.585 1.737 5.013-.274.834-1.513 4.757-1.513 4.757zM6.167 8.96c.69 0 1.25-.57 1.25-1.27 0-.703-.56-1.272-1.25-1.272s-1.25.57-1.25 1.27c0 .703.56 1.272 1.25 1.272zm7.583 0c.69 0 1.25-.57 1.25-1.27 0-.703-.56-1.272-1.25-1.272s-1.25.57-1.25 1.27c0 .703.56 1.272 1.25 1.272z"></path></g></svg>
+                微信扫一扫
+            </button>
             <div class="qrocde">
                 <img>
             </div>
@@ -239,7 +517,7 @@
     });
     $(".popover.share_menu").click(function (x) {
         x.stopPropagation(); //important!
-        var X = $(x.currentTarget).offset().left;
+        var X = $(x.currentTarget).offset().left-40;
         var Y = $(x.currentTarget).offset().top;
         console.log($(x.currentTarget).position(), X, Y);
         $(".popover_content").css({

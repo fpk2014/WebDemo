@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background: #f6f6f6;
+    font-size: 15px;
 }
 
 a, button {
@@ -21,6 +22,11 @@ main a {
     color:black;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 a:hover {
     color: #0077e6;
 }
@@ -28,4 +34,11 @@ a:hover {
 .Icon {
     border: transparent;
     outline:none;
+}
+
+.button_plain {
+    margin-left: 4px;
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
 }

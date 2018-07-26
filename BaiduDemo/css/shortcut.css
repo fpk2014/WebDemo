@@ -6,7 +6,7 @@ div.shortcut {
     position:relative;
     width:100%;
     display: inline-block;
-    border: 1px  solid rgb(218, 218, 218);
+    border-bottom: 1px  solid rgb(218, 218, 218);
 }
 
 div.s_location {
@@ -33,6 +33,7 @@ a.s_index_login{
 
 a.s_index_product {
     width:8em;
-    background: #ffe699;
-    border-bottom: 1px solid #ffe699;
+    background: #398bfb;
+    border-bottom: 1px solid #398bfb;
+    color: white;
 }

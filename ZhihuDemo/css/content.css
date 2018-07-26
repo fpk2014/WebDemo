@@ -29,26 +29,30 @@ div.m_content_side img {
         margin-top: 0;
         margin-right: 10px;
         margin-bottom: 10px;
-        background-color: white;
     }
 
     .top_story_main {
         display: block;
-        background-color: #ffffff;
+    }
+    
+    .card.top {
+        background: white;
     }
 
     .top_card_nav, .top_card_right{
         line-height: 58px;
         padding: 0 20px;
-
     }
 
+    .top_card_nav img {
+        vertical-align: middle;
+    }
     .top_card_nav div {
         display: inline-block;
     }
 
-    .top_card_nav div a{
-        margin-left: 40px;
+    .top_card_nav>div{
+       margin-left: 40px;
     }
 
     .top_card_right {
@@ -59,6 +63,8 @@ div.m_content_side img {
 
     .top_story_item {
         padding: 10px;
+        margin-bottom: 10px;
+        background-color: white;
     }
 
     .top_story_item .right_button {
@@ -77,7 +83,7 @@ div.m_content_side img {
 
         .rich_content {
             margin-top: 9px;
-            margin-bottom: -4px;
+            margin-bottom: 4px;
             overflow: hidden;
         }
 
@@ -88,3 +94,53 @@ div.m_content_side img {
         .share_menu button{
             color:red ;
         }
+
+        .vote_button{
+            display: inline-block;
+            padding: 0 16px;
+            font-size: 14px;
+            line-height: 32px;
+            text-align: center;
+            border-radius: 3px;
+            color: #0084ff;
+            background: rgba(0,132,255,.1);
+            border: 1px solid transparent;
+        }
+
+        .author_info_avatar{
+            vertical-align: middle;
+        }
+
+/* 侧边栏开始 */
+.to_sidebar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    box-sizing: border-box;
+}
+.sidebar_category_list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0 -5px;
+}
+
+.sidebar_category_list li {
+    display: flex;
+    width:33%;
+    margin-bottom: 25px;
+    align-items: center;
+}
+.GlobalSideBar-categoryItem a {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.GlobalSideBar-categoryIcon{
+    justify-content: center;
+}
+/* 侧边栏结束 */

@@ -1,8 +1,12 @@
 .popover_content {
     display: none;
     position: absolute;
-    width: 100px;
     margin-top:30px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(26,26,26,.1);
+    padding-bottom: 12px;
 }
 
 .popover_content img{
@@ -11,8 +15,27 @@
     background-image:url(../img/qrcode.png);
     background-size: cover; /*important*/
 }
+.popover_content svg {
+    vertical-align: middle;
+}
 
 .popover_content .qrocde {
     width: 94px;
     height: 94px;
+    margin: 0 auto;
+}
+
+.share_menu_button {
+    background-color: white;
+    height: 40px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    line-height: inherit;
+    border: none;
+    border-radius: 0;
 }
